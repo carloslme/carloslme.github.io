@@ -12,14 +12,12 @@ My expertise also includes software development, software engineering, and entre
 
 ### Professional experience
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
 #### iVoy - OnDemand & SameDay Deliveries, Mexico City — **Data Engineer**
 FEBRUARY 2021 - CURRENT
-- Consolidation of raw data from multiple databases such as MySQL, Postgres, MongoDB into a Kafka cluster mounted in AWS (more than 500M records and data streaming).
-- Creation of Data Lake on AWS S3 with data from Kafka Cluster and consumption with Glue, Athena and QuickSight to analyze data in real time.
-- Implement ETL processes for raw data with Glue and PySpark.
-- 
+- Consolidation of raw data from multiple databases such as **MySQL, Postgres, MongoDB** into a **Kafka** cluster mounted in **AWS** (more than 500M records and data streaming).
+- Creation of Data Lake on AWS S3 with data from **Kafka Cluster** and consumption with **Glue**, **Athena** and **QuickSight** to analyze data in real time.
+- Implement **ETL** processes for raw data with **Glue** and **PySpark**.
+
 
 ```markdown
 Syntax highlighted code block
