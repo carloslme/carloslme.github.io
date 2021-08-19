@@ -1,8 +1,10 @@
-## Welcome to GitHub Pages
+## Welcome to my Portfolio 
 
-You can use the [editor on GitHub](https://github.com/carloslme/carloslme.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+I'm Carlos, a passionate reader, apprentice and practicioner of new technologies mainly focused on data science such as machine learning, deep learning, data engineering, and their applicationes in solving complex business problems that that include collecting, intrepreting, analyzing, and modeling data.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+💻 I'm currently working as a Data Engineer in a Delivery Company.
+🌱 I'm learning how to deploy machine learning models in AWS and GCP.
+👯 I'm looking to collaborate on data science projects.
 
 ### Markdown
 
