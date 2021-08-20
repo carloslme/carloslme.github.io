@@ -11,7 +11,10 @@ My expertise also includes software development, software engineering, and entre
 👯 I'm looking to collaborate on data science projects.
 
 # Personal Projects
-## Project 1: Prediction of accidents in Mexico City
+## Project 1: Prediction of accidents in Mexico City 
+**Description**
+This project is about predicting what kind of accident a person could have, based on its geo-position, day of the week, and time, among other features. 
+The project repo can be found [here](https://github.com/carloslme/accidents-prediction-cdmx)
 
 ## Project 2: Classification of types of food
 
