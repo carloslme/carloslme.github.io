@@ -1,4 +1,4 @@
-## Welcome to my Portfolio 
+# Welcome to my Portfolio 
 
 I'm Carlos, a passionate reader, apprentice and practicioner of new technologies mainly focused on data science such as machine learning, deep learning, data engineering, and their applicationes in solving complex business problems that that include collecting, intrepreting, analyzing, and modeling data.
 
@@ -10,39 +10,21 @@ My expertise also includes software development, software engineering, and entre
 
 👯 I'm looking to collaborate on data science projects.
 
-### Professional experience
+# Personal Projects
+## Project 1: Prediction of accidents in Mexico City
 
-#### iVoy - OnDemand & SameDay Deliveries, Mexico City — **Data Engineer**
+## Project 2: Classification of types of food
+
+## Project 3 - Regression
+
+## Project 4 - Exploratory Data Analysis
+
+
+## Professional experience
+
+### iVoy - OnDemand & SameDay Deliveries, Mexico City — **Data Engineer**
 FEBRUARY 2021 - CURRENT
 - Consolidation of raw data from multiple databases such as **MySQL, Postgres, MongoDB** into a **Kafka** cluster mounted in **AWS** (more than 500M records and data streaming).
 - Creation of Data Lake on AWS S3 with data from **Kafka Cluster** and consumption with **Glue**, **Athena** and **QuickSight** to analyze data in real time.
 - Implement **ETL** processes for raw data with **Glue** and **PySpark**.
 
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/carloslme/carloslme.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
