@@ -13,10 +13,15 @@ My expertise also includes software development, software engineering, and entre
 # Personal Projects
 ## Project 1: Prediction of accidents in Mexico City 
 **Description**
+
 This project is about predicting what kind of accident a person could have, based on its geo-position, day of the week, and time, among other features. 
 The project repo can be found [here](https://github.com/carloslme/accidents-prediction-cdmx)
 
 ## Project 2: Classification of types of food
+**Description**
+
+This project predicts 16 types of food, and then predicts what type of breakfast could result from different combinations between them.
+The project repo can be found [here](https://github.com/carloslme/redconvolucional)
 
 ## Project 3 - Regression
 
