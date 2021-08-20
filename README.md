@@ -36,3 +36,9 @@ OCTOBER 2019 – JANUARY 2021
 - Prototyped a document processing automation notebook to avoid document rejection for Drivers and Partners for internal audits and increase information legitimacy of National Identification document using CNN ResNet-50, Computer Vision and OCR.
 - Generation of high-level documentation from Engineering teams for non-technical people in Rides Ops Mexico, Regulatory, Marketplace, among others.
 
+## Neimpetu S.A.S, Colombia (remote) — **Software Developer**
+MAY 2019 - SEPTEMBER 2019
+- Web application development for insurance company purposes.
+- Analysis of user requirements with clients.
+- Design, development, and test of more than 30 modules, CRUD frontend, and backend, search/sort/filter functionalities and general page navigation using Angular, Typescript, Java, Java Spring Tool, and SQL Server.
+- Developed modules were verified through user-testing, and design reviews.
