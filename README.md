@@ -30,9 +30,9 @@ FEBRUARY 2021 - CURRENT
 
 ## Uber Technologies Inc, Mexico City — **Intern in Driver and Rider Operations**
 OCTOBER 2019 – JANUARY 2021
-● Data collection, preprocessing, and analysis on large and complex data sets about documents, trips, profile information of drivers, partners, and vehicles using SQL (Presto), Python, Pandas, and internal tools.
-● Converted a manual spreadsheet into an automated dashboard that reports the regulatory status of Mexico cities for all drivers and vehicles documents using Python, SQL, and Google Sheets.
-● Designed and developed a GUI app to automate the pre-processing of driver, vehicle, and partner documents, saving 40+ hours per month of manual work, increasing drivers and vehicles funnel (2.6x) using Python, Django, and SQL.
-● Prototyped a document processing automation notebook to avoid document rejection for Drivers and Partners for internal audits and increase information legitimacy of National Identification document using CNN ResNet-50, Computer Vision and OCR.
-● Generation of high-level documentation from Engineering teams for non-technical people in Rides Ops Mexico, Regulatory, Marketplace, among others.
+- Data collection, preprocessing, and analysis on large and complex data sets about documents, trips, profile information of drivers, partners, and vehicles using SQL (Presto), Python, Pandas, and internal tools.
+- Converted a manual spreadsheet into an automated dashboard that reports the regulatory status of Mexico cities for all drivers and vehicles documents using Python, SQL, and Google Sheets.
+- Designed and developed a GUI app to automate the pre-processing of driver, vehicle, and partner documents, saving 40+ hours per month of manual work, increasing drivers and vehicles funnel (2.6x) using Python, Django, and SQL.
+- Prototyped a document processing automation notebook to avoid document rejection for Drivers and Partners for internal audits and increase information legitimacy of National Identification document using CNN ResNet-50, Computer Vision and OCR.
+- Generation of high-level documentation from Engineering teams for non-technical people in Rides Ops Mexico, Regulatory, Marketplace, among others.
 
