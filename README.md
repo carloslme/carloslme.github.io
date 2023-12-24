@@ -20,15 +20,28 @@ You can reach me at:
 
 ## EDUCATION
 
-* **Technical University of Munich**, *Munich Germany* (Oct 2023 - 2025)  
+### **Technical University of Munich**, *Munich Germany* (Oct 2023 - 2025)  
+
  ***Candidate for Master of Science in Informatics***  
  Coursework: Data Science, Machine Learning, Databases  
 
-* **Instituto Politecnico Nacional**, *Mexico City, Mexico* (Jan 2015 – Jul 2020)  
+### **Instituto Politecnico Nacional**, *Mexico City, Mexico* (Jan 2015 – Jul 2020)  
+
  ***Bachelor of Computer System Engineering***  
  GPA: 8.2 / 10  
  Coursework: Artificial Intelligence, Software Engineering, Business Administration, Distributed Computing, Microcontrollers, and Databases.
 
-* **Universidad de Caldas**, *Manizales, Colombia* (Jan 2019 – Jul 2019)  
+### **Universidad de Caldas**, *Manizales, Colombia* (Jan 2019 – Jul 2019)  
+
  ***Student Exchange in Computer System Engineering***  
  Coursework: Machine Learning  
+
+## PROFESSIONAL EXPERIENCE
+
+### ITESM (Instituto Tecnologico y de Estudios Superiores de Monterrey), *Mexico* (Feb 2022 – Sept 23)
+
+> **Part-Time University Lecturer**
+
+* Invited lecturer at the Master in Applied Artificial Intelligence (MNA-V) at Tecnológico de Monterrey for 6 weeks in July-August. Course: Introduction to MLOps.
+* Participated in the proposal and design to register the first MLOps subject as part of the ITESM master's program called Master in Applied Artificial Intelligence (MNA-V).
+* Part-time lecturer in programming subjects with Python, OOP, Unit and Integration Testing with Pytest, Packaging with Python, API REST with FastAPI, Software Engineering, Monitoring, Observability, Docker, Docker Compose, Terraform, and GitHub Actions, applied to a certification course in Deployment of Machine Learning Models in Production Environments (MLOps).
