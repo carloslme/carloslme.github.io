@@ -1,4 +1,15 @@
-# Welcome to my Website
+# Carlos Mejia
+
+## Table of Contents
+
+* [About me](#about-me)
+* [Education](#education)
+  * [Technical University of Munich](#technical-university-of-munich)
+  * [Instituto Politecnico Nacional](#instituto-politecnico-nacional)
+  * [Universidad de Caldas](#universidad-de-caldas)
+* [Professional Experience](#professional-experience)
+
+## About me
 
 I am Carlos, I have over seven years of experience in software development and data, primarily in consultancy, logistics, and mobility.
 
@@ -20,18 +31,24 @@ You can reach me at:
 
 ## EDUCATION
 
-### **Technical University of Munich**, *Munich Germany* (Oct 2023 - 2025)  
+### Technical University of Munich
+
+**Munich Germany** (Oct 2023 - 2025)  
 
  ***Candidate for Master of Science in Informatics***  
  Coursework: Data Science, Machine Learning, Databases  
 
-### **Instituto Politecnico Nacional**, *Mexico City, Mexico* (Jan 2015 – Jul 2020)  
+### Instituto Politecnico Nacional
+
+**Mexico City, Mexico** (Jan 2015 – Jul 2020)  
 
  ***Bachelor of Computer System Engineering***  
  GPA: 8.2 / 10  
  Coursework: Artificial Intelligence, Software Engineering, Business Administration, Distributed Computing, Microcontrollers, and Databases.
 
-### **Universidad de Caldas**, *Manizales, Colombia* (Jan 2019 – Jul 2019)  
+### Universidad de Caldas
+
+**Manizales, Colombia** (Jan 2019 – Jul 2019)  
 
  ***Student Exchange in Computer System Engineering***  
  Coursework: Machine Learning  
