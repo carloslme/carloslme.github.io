@@ -1,24 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Dynamic Markdown Rendering</title>
+    <!-- Include marked.js for Markdown parsing -->
     <script src="https://cdn.jsdelivr.net/npm/marked@latest/marked.min.js"></script>
+    <!-- Include highlight.js styles and script for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
 </head>
+
 <body>
     <div id="markdown-content"></div>
 
     <script>
+        // The raw URL of the readme.md file from the repository
+        const readmeUrl = 'https://raw.githubusercontent.com/carloslme/itesm-mlops-project/main/README.md';
+
         // Fetch the Markdown file
-        fetch('venv.md')
+        fetch(readmeUrl)
             .then(response => response.text())
             .then(markdown => {
                 // Convert Markdown to HTML
                 const html = marked.parse(markdown);
                 // Insert the HTML into the web page
                 document.getElementById('markdown-content').innerHTML = html;
+                // Apply syntax highlighting after the content has been inserted
+                document.querySelectorAll('pre code').forEach((block) => {
+                    hljs.highlightBlock(block);
+                });
             })
             .catch(error => console.error('Error fetching the Markdown file:', error));
+
+        // Ensure hljs is defined before calling highlightAll
+        window.addEventListener('load', (event) => {
+            hljs.highlightAll();
+        });
     </script>
 </body>
+
 </html>
