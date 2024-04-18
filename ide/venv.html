@@ -3,7 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Dynamic Markdown Rendering</title>
+    <title>Virtual Envs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="How to create virtual environments in Python">
+    <meta name="author" content="Carlos Mejia">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <!-- <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css"> -->
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+    
     <!-- Include marked.js for Markdown parsing -->
     <script src="https://cdn.jsdelivr.net/npm/marked@latest/marked.min.js"></script>
     <!-- Include highlight.js styles and script for syntax highlighting -->
@@ -18,7 +32,9 @@
 
     <script>
         // The raw URL of the readme.md file from the repository
-        const readmeUrl = 'https://raw.githubusercontent.com/carloslme/itesm-mlops-project/main/README.md';
+        // const readmeUrl = 'https://raw.githubusercontent.com/carloslme/itesm-mlops-project/main/README.md';
+        const readmeUrl = 'https://raw.githubusercontent.com/carloslme/python-utils/main/README.md';
+// 
 
         // Fetch the Markdown file
         fetch(readmeUrl)
