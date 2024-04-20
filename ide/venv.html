@@ -33,23 +33,39 @@
     <script>
         // The raw URL of the readme.md file from the repository
         // const readmeUrl = 'https://raw.githubusercontent.com/carloslme/itesm-mlops-project/main/README.md';
-        const readmeUrl = 'https://raw.githubusercontent.com/carloslme/python-utils/main/README.md';
-// 
+        const readmeUrl = 'https://raw.githubusercontent.com/carloslme/intro-data-engineering/main/README.md';
 
-        // Fetch the Markdown file
-        fetch(readmeUrl)
-            .then(response => response.text())
-            .then(markdown => {
-                // Convert Markdown to HTML
-                const html = marked.parse(markdown);
-                // Insert the HTML into the web page
-                document.getElementById('markdown-content').innerHTML = html;
-                // Apply syntax highlighting after the content has been inserted
-                document.querySelectorAll('pre code').forEach((block) => {
-                    hljs.highlightBlock(block);
-                });
+        // // Fetch the Markdown file
+        // fetch(readmeUrl, {
+        //     headers: {
+        //         'Authorization': `token TOKEN`
+        //     },
+        //     mode: 'no-cors'
+        //     })
+        //     .then(response => response.text())
+        //     .then(markdown => {
+        //         // Convert Markdown to HTML
+        //         const html = marked.parse(markdown);
+        //         // Insert the HTML into the web page
+        //         document.getElementById('markdown-content').innerHTML = html;
+        //         // Apply syntax highlighting after the content has been inserted
+        //         document.querySelectorAll('pre code').forEach((block) => {
+        //             hljs.highlightBlock(block);
+        //         });
+        //     })
+        //     .catch(error => console.error('Error fetching the Markdown file:', error));
+        fetch('https://raw.githubusercontent.com/carloslme/intro-data-engineering/main/README.md', {
+            headers: {
+                'Authorization': 'token TOKEN'
+            },
+            mode: 'no-cors'
             })
-            .catch(error => console.error('Error fetching the Markdown file:', error));
+            .then(response => response.text())
+            .then(data => {
+                // Handle the data from the README.md file
+                console.log(data);
+            })
+            .catch(error => console.error(error));
 
         // Ensure hljs is defined before calling highlightAll
         window.addEventListener('load', (event) => {
