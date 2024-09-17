@@ -78,3 +78,4 @@ You can reach me at:
 - Designed and implemented Data Security baselines, such as a training course about best practices, and authentication (MFA, 2FA).
 - Implemented a batch pipeline orchestration with Shipyard, Cloud Functions, and BigQuery.
 - Supported and improved Analytics Engineering team processes such as ETL and ELT.
+  MO.
