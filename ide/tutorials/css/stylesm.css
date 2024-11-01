@@ -1,0 +1,274 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Source Code Pro', monospace; 
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: hwb(0 1% 97%);
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0px;
+}
+
+/* Estilos para el contenedor nav */
+header nav {
+    display: flex;           /* Convertir el contenedor en un flexbox */
+    justify-content: space-between; /* Alinea todo el contenido a la derecha */
+    align-items: center;      /* Centra verticalmente si es necesario */
+    width: 100%;              /* Asegura que ocupe todo el ancho */
+}
+
+/* Estilos para la sección del logo */
+header .logo {
+    margin-right: auto;           /* Esto asegura que el logo se quede en la izquierda */
+    padding-left: 20px; 
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Source Code Pro', monospace; /* Aplica la nueva fuente */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: hwb(250 38% 0%);
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    position: fixed; /* Para mantener la barra siempre visible */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.navbar.transparent {
+    background-color: transparent;
+}
+
+.navbar.scrolled {
+    background-color: hsla(0, 2%, 19%, 0.902); /* Cambia el fondo a negro con opacidad */
+}
+
+/* Opcional: Para mejorar la visibilidad del contenido de la barra */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    font-family: 'Source Code Pro', monospace; /* Aplica la nueva fuente */
+}
+
+.navbar.scrolled a {
+    color: hsl(20, 100%, 99%); /* Cambiar color del texto al hacer scroll */
+}
+
+#hero {
+    background: url('/ide/tutorials/img/img2.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Capa oscura para hacer que el texto sea legible */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text h2 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    font-family: 'Source Code Pro', monospace; /* Aplica la nueva fuente */
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: hsl(244, 82%, 11%);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #1e3a43;
+}
+
+.meetings-section {
+    padding: 20px; /* Espacio interno para la sección */
+    display: flex; /* Habilita flexbox para el contenedor */
+    justify-content: center; /* Alinea las tarjetas al centro */
+    flex-direction: column; /* Apila los elementos en una columna */
+    align-items: center; /* Alinea los elementos hijos al centro */
+    background-color: hwb(0 84% 16%); /* Fondo negro */
+}
+
+.meetings-container {
+    display: flex; /* Asegura que las tarjetas se alineen horizontalmente */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan si hay muchas */
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.meeting-card {
+    width: 900px; /* Ancho de la tarjeta (ajusta según sea necesario) */
+    height: auto; /* Alto automático para permitir más contenido */
+    background-color: rgb(246, 246, 246); /* Fondo opcional para ver la tarjeta */
+    border: 1px solid #ccc; /* Borde opcional para resaltar la tarjeta */
+    border-radius: 8px; /* Esquinas redondeadas */
+    overflow: hidden; /* Evita que el contenido se salga */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional para efecto de profundidad */
+    padding: 10px; /* Espacio interno para la tarjeta */
+    display: flex; /* Para alinear el contenido de manera vertical */
+    flex-direction: column; /* Coloca el contenido en columnas */
+    align-items: center; /* Alinea el contenido al centro */
+}
+
+.meeting-card img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+    height: 500px; /* Fija una altura para la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+}
+
+.meeting-info {
+    padding: 10px; /* Espacio interno para el contenido de la tarjeta */
+    flex-grow: 1; /* Permite que el contenido ocupe el espacio disponible */
+    display: flex; /* Agrega esta línea */
+    flex-direction: column; /* Asegúrate de que los elementos se apilen verticalmente */
+    align-items: center; /* Centra horizontalmente los elementos */
+    justify-content: flex-end; /* Cambia esto para ajustar el espacio vertical si es necesario */
+}
+
+.meeting-info h3 {
+    font-size: 1.2em; /* Ajusta el tamaño del título */
+}
+
+.meeting-info p {
+    font-size: 0.9em; /* Ajusta el tamaño del texto */
+}
+
+footer {
+    background-color: hsl(0, 0%, 10%);
+    color: white;
+    padding: 5px 5px;
+    height: 50px; /* Establece una altura fija */
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Estilos generales para Markdown */
+.markdown-content {
+    font-family: 'Hind Siliguri', sans-serif; /* Aplica la nueva fuente */
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Estilos para los encabezados de Markdown */
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.markdown-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.markdown-content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.markdown-content h3 {
+    font-size: 1.5rem;
+}
+
+/* Estilos para las listas */
+.markdown-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.markdown-content ul li {
+    margin-bottom: 10px;
+}
+
+/* Estilos para los enlaces */
+.markdown-content a {
+    color: #030329;
+    text-decoration: none;
+}
+
+.markdown-content a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para bloques de código */
+.markdown-content pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-left: 0px solid #030329;
+    overflow-x: auto;
+}
+
+.markdown-content code {
+    font-family: monospace;
+    background-color: #eee;
+    padding: 2px 4px;
+    border-radius: 1px;
+}
+
+/* Estilos para imágenes */
+.markdown-content img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 120px;
+}
+
+.custom-size-py {
+    width: 100px;
+    height: 120px;
+    object-fit: contain; /* Asegúrate de que la imagen no se distorsione */
+}
