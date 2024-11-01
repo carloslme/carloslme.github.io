@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title> <!-- Cambiar el título a usar el título de la página -->
+    <link rel="stylesheet" href="/ide/tutorials/css/stylesm.css"> <!-- Asegúrate de que la ruta sea correcta -->
+</head>
+<body>
+    <header class="navbar">
+        <nav>
+            <div class="logo">
+                <h1>IDE WEBSITE</h1>
+            </div>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Acerca de</a></li>
+                <li><a href="#meetings">Reuniones</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h2>{{ page.title }}</h2> <!-- Asegúrate de que el título de la página se muestre aquí -->
+                <p>Todo lo que necesitas para ser el mejor.</p>
+                <a href="#meetings" class="btn">Test</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="meetings" class="meetings-section">
+        <div class="meetings-container">
+            <div class="meeting-card">
+                <img src="/ide/tutorials/img/img1.jpg" alt="Reunión 1"> <!-- Asegúrate de que la ruta sea correcta -->
+                <div class="meeting-info">
+                    <div class="markdown-content">
+                        {{ content }} <!-- Aquí se cargará el contenido del archivo Markdown -->
+                    </div>                    
+                    <a href="#" class="btn">Ver Detalles</a>
+                </div>
+            </div>            
+            <!-- Más tarjetas de reuniones aquí -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; WEBSITE CARLOS IDE</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled'); // Aplica el fondo negro
+                navbar.classList.remove('transparent'); // Remueve la transparencia
+            } else {
+                navbar.classList.remove('scrolled'); // Remueve el fondo negro
+                navbar.classList.add('transparent'); // Aplica la transparencia
+            }
+        });
+    </script>
+</body>
+</html>
