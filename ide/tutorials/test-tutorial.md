@@ -6,7 +6,7 @@ title: "Test Tutorial"
 # Test Tutorial
 
 <!-- You can replace the image and adjust the size as needed -->
-<center><img src="img/test-tutorial.jpg" alt="Panzafus" width="200" height="250"></center>
+<center><img src="img/test-tutorial/panzafus.jpg" alt="Panzafus" width="200" height="250"></center>
 
 ## Table of Contents
 <!-- Update the links to match the sections you actually use -->
