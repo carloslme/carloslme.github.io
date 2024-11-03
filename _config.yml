@@ -1,1 +1,5 @@
 theme: jekyll-theme-architect
+markdown: kramdown  # Especifica el motor de Markdown
+collections:
+  tutorials:
+    output: true

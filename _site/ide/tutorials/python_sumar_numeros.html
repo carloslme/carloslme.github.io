@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumar Números en Python</title> <!-- Cambiar el título a usar el título de la página -->
+    <link rel="stylesheet" href="/ide/tutorials/css/stylesm.css"> <!-- Asegúrate de que la ruta sea correcta -->
+</head>
+<body>
+    <header class="navbar">
+        <nav>
+            <div class="logo">
+                <h1>IDE WEBSITE</h1>
+            </div>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Acerca de</a></li>
+                <li><a href="#meetings">Reuniones</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h2>Sumar Números en Python</h2> <!-- Asegúrate de que el título de la página se muestre aquí -->
+                <p>Todo lo que necesitas para ser el mejor.</p>
+                <a href="#meetings" class="btn">Test</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="meetings" class="meetings-section">
+        <div class="meetings-container">
+            <div class="meeting-card">
+                <img src="/ide/tutorials/img/img1.jpg" alt="Reunión 1"> <!-- Asegúrate de que la ruta sea correcta -->
+                <div class="meeting-info">
+                    <div class="markdown-content">
+                        <h1 id="tutorial-cómo-sumar-dos-números-enteros-en-python">Tutorial: Cómo Sumar dos Números Enteros en Python</h1>
+
+<!-- Puedes reemplazar la imagen y ajustar el tamaño según sea necesario -->
+<center><img src="img/py.png" alt="logo python" width="100" height="120" class="custom-size-py" /></center>
+
+<h2 id="tabla-de-contenidos">Tabla de Contenidos</h2>
+<!-- Actualiza los enlaces a las secciones que realmente utilices -->
+<ul>
+  <li><a href="#introducción">Introducción</a></li>
+  <li><a href="#ejemplos">Ejemplos</a>
+    <ul>
+      <li><a href="#ejemplo-1-definir-una-función-para-sumar">Ejemplo 1: Definir una función para sumar</a></li>
+      <li><a href="#ejemplo-2-solicitar-la-entrada-del-usuario">Ejemplo 2: Solicitar la entrada del usuario</a></li>
+      <li><a href="#ejemplo-3-ejecutar-el-programa-de-suma">Ejemplo 3: Ejecutar el programa de suma</a></li>
+    </ul>
+  </li>
+  <li><a href="#conclusion">Conclusión</a></li>
+  <li><a href="#referencias">Referencias</a></li>
+</ul>
+
+<h2 id="introducción">Introducción</h2>
+<!-- Aquí puedes escribir una introducción que describa el propósito del tutorial y lo que el usuario aprenderá -->
+<p>En este tutorial, aprenderás cómo sumar dos números enteros en Python utilizando una función simple. Veremos tres ejemplos que cubren cómo definir la función, solicitar la entrada del usuario y ejecutar el programa de suma.</p>
+<h2 id="ejemplos">Ejemplos</h2>
+<!-- Asegúrate de que cada ejemplo esté bien explicado y relacionado con el tema del tutorial -->
+<h4 id="ejemplo-1-definir-una-función-para-sumar">Ejemplo 1: Definir una función para sumar</h4>
+<p>En este ejemplo, definimos una función llamada <code class="language-plaintext highlighter-rouge">sumar_numeros</code> que toma dos parámetros (números enteros) y devuelve la suma de ellos.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Función que suma dos números
+</span><span class="k">def</span> <span class="nf">sumar_numeros</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</code></pre></div></div>
+<blockquote>
+  <p>Al llamar a esta función con dos números, por ejemplo, sumar_numeros(5, 3), devolverá el valor 8.</p>
+</blockquote>
+
+<h4 id="ejemplo-2-solicitar-la-entrada-del-usuario">Ejemplo 2: Solicitar la entrada del usuario</h4>
+<p>Aquí crearemos un programa que solicite al usuario que introduzca dos números para sumarlos.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Solicitar números al usuario
+</span><span class="n">numero1</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="nf">input</span><span class="p">(</span><span class="sh">"</span><span class="s">Introduce el primer número: </span><span class="sh">"</span><span class="p">))</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="nf">input</span><span class="p">(</span><span class="sh">"</span><span class="s">Introduce el segundo número: </span><span class="sh">"</span><span class="p">))</span>
+
+</code></pre></div></div>
+<blockquote>
+  <p>El usuario ingresará dos números y el programa guardará esos valores como enteros.</p>
+</blockquote>
+
+<h4 id="ejemplo-3-ejecutar-el-programa-de-suma">Ejemplo 3: Ejecutar el programa de suma</h4>
+<p>Finalmente, usamos la función definida anteriormente para sumar los números introducidos por el usuario y mostrar el resultado.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Llamar a la función sumar_numeros y mostrar el resultado
+</span><span class="n">resultado</span> <span class="o">=</span> <span class="nf">sumar_numeros</span><span class="p">(</span><span class="n">numero1</span><span class="p">,</span> <span class="n">numero2</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">La suma de </span><span class="si">{</span><span class="n">numero1</span><span class="si">}</span><span class="s"> y </span><span class="si">{</span><span class="n">numero2</span><span class="si">}</span><span class="s"> es </span><span class="si">{</span><span class="n">resultado</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+<blockquote>
+  <p>Si el usuario introduce los números 5 y 7, el despliegue será:</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>La suma de 5 y 7 es 12
+</code></pre></div></div>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<!-- Proporciona un resumen claro y conciso de lo que el usuario debería haber aprendido en este tutorial -->
+<p>En este tutorial, hemos aprendido cómo sumar dos números enteros en Python utilizando una función simple, solicitando la entrada del usuario y mostrando el resultado en pantalla.</p>
+
+<h2 id="referencias">Referencias</h2>
+<!-- Enlista cualquier fuente que hayas utilizado o que el usuario pueda consultar para más información -->
+<ul>
+  <li><a href="https://docs.python.org/3/">Documentación oficial de Python</a></li>
+  <li><a href="https://docs.python.org/3/library/functions.html#input">Cómo usar la función input() en Python</a></li>
+</ul>
+
+ <!-- Aquí se cargará el contenido del archivo Markdown -->
+                    </div>                    
+                    <a href="#" class="btn">Ver Detalles</a>
+                </div>
+            </div>            
+            <!-- Más tarjetas de reuniones aquí -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; WEBSITE CARLOS IDE</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled'); // Aplica el fondo negro
+                navbar.classList.remove('transparent'); // Remueve la transparencia
+            } else {
+                navbar.classList.remove('scrolled'); // Remueve el fondo negro
+                navbar.classList.add('transparent'); // Aplica la transparencia
+            }
+        });
+    </script>
+</body>
+</html>
