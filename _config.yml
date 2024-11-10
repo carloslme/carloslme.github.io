@@ -3,3 +3,22 @@ markdown: kramdown  # Especifica el motor de Markdown
 collections:
   tutorials:
     output: true
+
+# Configuración de plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap  # Genera un sitemap automáticamente
+
+# Configuración básica de SEO
+seo:
+  title: "Carlos Website"  # Título del sitio
+  description: "This is a site to learn"  # Descripción breve del sitio
+  url: "https://carloslme.github.io"  # URL del sitio
+
+# Configuración de Google Analytics
+google_analytics: G-KBS9DVHWCN  # ID de seguimiento de Google Analytics
+
+# Configuración de sitemap
+sitemap:
+  exclude:
+    - /404.html  # Puedes excluir otras páginas si es necesario

@@ -84,7 +84,7 @@ header nav ul li a:hover {
 }
 
 #hero {
-    background: url('/ide/tutorials/img/img2.jpg') no-repeat center center/cover;
+    background: url('/tutorials/img/img2.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -164,13 +164,19 @@ header nav ul li a:hover {
 }
 
 .meeting-info {
-    padding: 10px; /* Espacio interno para el contenido de la tarjeta */
+    padding: 5px; /* Espacio interno para el contenido de la tarjeta */
     flex-grow: 1; /* Permite que el contenido ocupe el espacio disponible */
     display: flex; /* Agrega esta línea */
     flex-direction: column; /* Asegúrate de que los elementos se apilen verticalmente */
     align-items: center; /* Centra horizontalmente los elementos */
     justify-content: flex-end; /* Cambia esto para ajustar el espacio vertical si es necesario */
+    min-width: 1000px; /* Establece el ancho mínimo */
 }
+
+.meeting-info {
+    width: 1000px; /* Ancho fijo */
+}
+
 
 .meeting-info h3 {
     font-size: 1.2em; /* Ajusta el tamaño del título */
