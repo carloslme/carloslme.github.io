@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:4000/tutorials/python_sumar_numeros.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/tutorials/template.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/tutorials/test-tutorial.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/ide/</loc>
+<lastmod>2024-11-05T16:19:26-06:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/ide/meeting-details.html</loc>
+<lastmod>2024-11-05T15:25:36-06:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/ide/meetings.html</loc>
+<lastmod>2024-11-05T15:25:34-06:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/menu.html</loc>
+<lastmod>2024-11-09T22:53:25-06:00</lastmod>
+</url>
+</urlset>

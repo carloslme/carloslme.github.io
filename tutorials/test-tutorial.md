@@ -1,12 +1,14 @@
 ---
 layout: website  # This tells Jekyll to use 'twebsite.html'
-title: "Tutorial Title"
+title: "Test Tutorial"
+description: "Here put a description of the tutorial."
+keywords: "Here, put, keywords, related, with, your, tutorial"
 ---
 
-# Tutorial Title
+# Test Tutorial
 
 <!-- You can replace the image and adjust the size as needed -->
-<center><img src="img/your_image.jpg" alt="Image description" width="200" height="250"></center>
+<center><img src="img/test-tutorial/panzafus.jpg" alt="Panzafus" width="200" height="250"></center>
 
 ## Table of Contents
 <!-- Update the links to match the sections you actually use -->
@@ -20,7 +22,7 @@ title: "Tutorial Title"
 
 ## Introduction
 <!-- Write an introduction here that describes the purpose of the tutorial and what the user will learn -->
-Write a brief introduction here, explaining the context and goal of this tutorial or document.
+This test tutorial is to test the functionality of the markdown parser.
 
 ## Examples
 <!-- Make sure each example is well-explained and relevant to the tutorial topic -->
