@@ -1,6 +1,8 @@
 ---
 layout: website  # Esto debe coincidir con el nombre del archivo HTML en _layouts
 title: "Sumar Números en Python"
+description: "Here put a description of the tutorial."
+keywords: "Here, put, keywords, like, python, two number"
 ---
 
 
