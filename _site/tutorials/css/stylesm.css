@@ -241,8 +241,8 @@ footer {
 
 /* Estilos para los enlaces */
 .markdown-content a {
-    color: #030329;
-    text-decoration: none;
+    color: hsl(240, 86%, 59%);
+    text-decoration: underline;
 }
 
 .markdown-content a:hover {
