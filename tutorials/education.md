@@ -1,4 +1,15 @@
-# Mi recursos favoritos para estudiar
+---
+layout: website  # Esto debe coincidir con el nombre del archivo HTML en _layouts
+title: "Recursos estudio"
+description: "Mis recursos favoritos para estudiar"
+keywords: "anki, pomodoro, learn"
+---
+
+<!-- Puedes reemplazar la imagen y ajustar el tamaño según sea necesario -->
+<center><img src="img/cat-studying.jpeg" alt="cat studying" width="150" height="170" class= "custom-size-py"></center>
+
+
+# Mis recursos favoritos para estudiar
 
 ## **Introducción**
 
