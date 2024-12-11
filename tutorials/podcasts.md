@@ -1,22 +1,21 @@
 ---
 layout: website  # This tells Jekyll to use 'twebsite.html'
 title: "Podcasts"
-description: "Here put a description of the tutorial."
-keywords: "Here, put, keywords, related, with, your, tutorial"
+description: "Podcasts que yo recomiendo ver."
+keywords: "knowledge, entrepreneurship"
 ---
 
 # Podcasts recomendados
 
 <!-- You can replace the image and adjust the size as needed -->
-<center><img src="img/your_image.jpg" alt="Image description" width="200" height="250"></center>
+<center><img src="img/cat-podcast.png" alt="Cat listening to a podcast." width="400" height="450"></center>
 
 ## Table of Contents
 <!-- Update the links to match the sections you actually use -->
 * [Introduction](#introduction)
 * [Examples](#examples)
-  * [Example 1: Description of Example 1](#example-1-example-title-1)
-  * [Example 2: Description of Example 2](#example-2-example-title-2)
-  * [Example 3: Description of Example 3](#example-3-example-title-3)
+  * [Autoconocimiento](#autoconocimiento)
+  * [Emprendimiento](#emprendimiento)
 * [Conclusion](#conclusion)
 * [References](#references)
 
@@ -50,7 +49,6 @@ Write a brief introduction here, explaining the context and goal of this tutoria
 #### La Historia de STORI | Marlene Garayzar Cracks Podcast #305
 
 #### Cómo Funciona el VENTURE CAPITAL ERIC PEREZ - GROVAS | #258
-
 
 ## Conclusion
 
