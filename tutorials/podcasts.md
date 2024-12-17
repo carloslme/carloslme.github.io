@@ -44,6 +44,12 @@ Write a brief introduction here, explaining the context and goal of this tutoria
 
 #### V. Completa. Por qué leer libros nos cambia la vida. Miguel Salas, doctor en Literatura y profesor
 
+#### V. Completa. Cómo dejar de ser tu peor enemigo. Alba Cardalda, psicóloga
+
+#### Versión Completa. "Ser una persona sana empieza por conocerse". Elizabeth Clapés, psicóloga
+
+#### Oso Trava: "Todos tenemos algo que compartir"
+
 ### Emprendimiento
 
 #### La Historia de STORI | Marlene Garayzar Cracks Podcast #305
