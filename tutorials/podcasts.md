@@ -56,6 +56,9 @@ Write a brief introduction here, explaining the context and goal of this tutoria
 
 #### Cómo Funciona el VENTURE CAPITAL ERIC PEREZ - GROVAS | #258
 
+#### Oso Trava: "Todos tenemos algo que compartir"
+Link: https://www.youtube.com/watch?v=58f_34nbcI0
+
 ## Conclusion
 
 <!-- Provide a clear and concise summary of what the user should have learned in this tutorial -->
