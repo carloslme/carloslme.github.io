@@ -10,7 +10,11 @@ Cloud & Data Engineer | Munich, Germany
 
 ## Summary
 
-Cloud & Data Engineer with hands-on experience delivering AWS infrastructure-as-code (Terraform, AWS CDK), multi-environment data platforms, and batch pipelines (EMR/Spark) at enterprise scale, plus a background designing DevOps workflows and IAM/security hardening. Currently completing an M.Sc. in Informatics at TUM Munich.
+Carlos has more than nine years of experience in software and data development, combining consultancy, startups, and large companies across mobility, logistics, media, and healthcare. He has led teams of 2 to 3 people and is currently expanding his technical experience and knowledge with a master's degree in Informatics at TUM Munich, focused on cloud computing, machine learning, including deep learning and natural language processing, and software engineering.
+
+He is equally comfortable in the fast-paced environment of a startup, where he has designed data architectures from scratch, and in the more structured environment of a large company, where he has built production infrastructure at scale. That combination allows him to bring strong engineering practices to small teams without slowing down the speed they need.
+
+He is excited by complex technical and business challenges related to collecting, interpreting, analyzing, and modeling data, and increasingly with orchestrating AI agents in real engineering workflows. He also enjoys sharing his knowledge, as he has taught classes at both personal and university levels on topics such as machine learning, MLOps, data engineering, and data analysis.
 
 ## Experience
 
