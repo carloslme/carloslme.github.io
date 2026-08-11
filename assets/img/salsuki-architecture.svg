@@ -1,0 +1,80 @@
+<svg viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="salsuki-arch-title salsuki-arch-desc">
+  <title id="salsuki-arch-title">Salsuki system architecture</title>
+  <desc id="salsuki-arch-desc">Browser client calls Vercel hosting, Supabase (Auth, Postgres with row-level security, Storage, Edge Functions), and Sentry. GitHub Actions runs CI, deploys to Vercel, and validates every database migration.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#8a93a8"/>
+    </marker>
+  </defs>
+
+  <style>
+    .box { fill: #ffffff; stroke: #dce3ee; stroke-width: 1; }
+    .box-accent { fill: #e9f2fb; stroke: #0f6cbd; stroke-width: 1; }
+    .box-muted { fill: #f5f7fb; stroke: #dce3ee; stroke-width: 1; stroke-dasharray: 3,3; }
+    .title { font-family: "Hind Siliguri", Arial, sans-serif; font-size: 14px; font-weight: 700; fill: #172033; }
+    .subtitle { font-family: "Hind Siliguri", Arial, sans-serif; font-size: 11px; fill: #5f6d85; }
+    .caption { font-family: "Hind Siliguri", Arial, sans-serif; font-size: 11px; fill: #5f6d85; }
+    .edge { fill: none; stroke: #8a93a8; stroke-width: 1.2; }
+    .edge-dashed { fill: none; stroke: #8a93a8; stroke-width: 1.2; stroke-dasharray: 3,3; }
+  </style>
+
+  <rect x="330" y="20" width="240" height="56" rx="14" class="box"/>
+  <text x="450" y="43" text-anchor="middle" class="title">Browser / PWA</text>
+  <text x="450" y="60" text-anchor="middle" class="subtitle">React 19 + Vite + Tailwind</text>
+
+  <rect x="60" y="130" width="220" height="56" rx="14" class="box-accent"/>
+  <text x="170" y="153" text-anchor="middle" class="title">GitHub Actions</text>
+  <text x="170" y="170" text-anchor="middle" class="subtitle">Lint, build, migration check</text>
+
+  <rect x="340" y="130" width="220" height="56" rx="14" class="box-accent"/>
+  <text x="450" y="153" text-anchor="middle" class="title">Vercel</text>
+  <text x="450" y="170" text-anchor="middle" class="subtitle">Production + PR previews</text>
+
+  <rect x="620" y="130" width="220" height="56" rx="14" class="box-muted"/>
+  <text x="730" y="153" text-anchor="middle" class="title">Sentry</text>
+  <text x="730" y="170" text-anchor="middle" class="subtitle">Error monitoring</text>
+
+  <text x="450" y="228" text-anchor="middle" class="caption">Supabase project</text>
+  <rect x="90" y="240" width="720" height="100" rx="16" fill="none" stroke="#dce3ee"/>
+
+  <rect x="110" y="258" width="150" height="64" rx="12" class="box"/>
+  <text x="185" y="284" text-anchor="middle" class="title">Auth</text>
+  <text x="185" y="300" text-anchor="middle" class="subtitle">Email/password, JWT</text>
+
+  <rect x="280" y="258" width="180" height="64" rx="12" class="box"/>
+  <text x="370" y="284" text-anchor="middle" class="title">Postgres</text>
+  <text x="370" y="300" text-anchor="middle" class="subtitle">RLS on every table</text>
+
+  <rect x="480" y="258" width="150" height="64" rx="12" class="box"/>
+  <text x="555" y="284" text-anchor="middle" class="title">Storage</text>
+  <text x="555" y="300" text-anchor="middle" class="subtitle">Media, resources</text>
+
+  <rect x="650" y="258" width="150" height="64" rx="12" class="box"/>
+  <text x="725" y="279" text-anchor="middle" class="title">Edge functions</text>
+  <text x="725" y="295" text-anchor="middle" class="subtitle">Deno, service-role</text>
+
+  <path d="M400,76 L280,130" class="edge" marker-end="url(#arrow)"/>
+  <path d="M450,76 L450,130" class="edge" marker-end="url(#arrow)"/>
+  <path d="M500,76 L620,130" class="edge" marker-end="url(#arrow)"/>
+
+  <path d="M370,76 C300,140 220,200 185,258" class="edge" marker-end="url(#arrow)"/>
+  <path d="M420,76 C400,150 390,200 370,258" class="edge" marker-end="url(#arrow)"/>
+  <path d="M480,76 C520,150 540,200 555,258" class="edge" marker-end="url(#arrow)"/>
+  <path d="M530,76 C620,150 690,200 725,258" class="edge" marker-end="url(#arrow)"/>
+
+  <path d="M180,186 C200,215 280,235 330,258" class="edge-dashed" marker-end="url(#arrow)"/>
+  <path d="M650,295 C500,370 450,370 400,315" class="edge" marker-end="url(#arrow)"/>
+
+  <g transform="translate(90,375)">
+    <rect width="14" height="14" rx="3" fill="#ffffff" stroke="#dce3ee"/>
+    <text x="20" y="12" class="caption">Client</text>
+    <rect x="90" width="14" height="14" rx="3" fill="#e9f2fb" stroke="#0f6cbd"/>
+    <text x="110" y="12" class="caption">Deploy / CI</text>
+    <rect x="210" width="14" height="14" rx="3" fill="#ffffff" stroke="#dce3ee"/>
+    <text x="230" y="12" class="caption">Supabase</text>
+    <rect x="320" width="14" height="14" rx="3" fill="#f5f7fb" stroke="#dce3ee" stroke-dasharray="2,2"/>
+    <text x="340" y="12" class="caption">Monitoring</text>
+  </g>
+
+  <text x="90" y="415" class="caption">Solid arrows: runtime request/data flow. Dashed: CI validates every migration against a local Supabase stack before merge.</text>
+</svg>
