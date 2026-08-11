@@ -57,35 +57,53 @@ Oct 2019 – Jan 2021
 - Performed data collection, cleaning, exploration, and analysis using SQL (Presto), Python, and Pandas across Mexico operations.
 - Productized a GUI automation app (Python, Django) saving 40+ hours/month and developed a document processing prototype using Deep Learning and OCR.
 
+## Master's Thesis
+
+- **Knowledge Graph-Augmented RAG for Automotive Safety Case Generation**, TUM Chair of Robotics, AI and Real-Time Systems, advised by Prof. Alois Knoll and André Schamschurko.
+- Registration is pending, expected start Aug 2026.
+- The thesis evaluates a Knowledge Graph retrieval layer for CeCaS (UN Regulation 152 safety case code generation), comparing performance against RegulaRAG and HippoRAG.
+- Full details & living log: [/projects/masters-thesis/](https://carloslme.com/projects/masters-thesis/)
+
 ## Projects
 
 ### Salsuki: Community Management Platform
 2024 – Current
 - Built a full-stack platform for a non-profit salsa school with bookings, wallet balances, waitlists, and learning resources.
 - Delivered the frontend with React, TypeScript, Vite, and Tailwind CSS, and the backend with Supabase, Edge Functions, Auth, and Storage.
- - Website and full write-up: /projects/salsuki/
+- Full write-up: [/projects/salsuki/](https://carloslme.com/projects/salsuki/)
 
-### DevOps Course: GenAI-Powered Web Application
+### LECture-bot: GenAI Course Assistant
 Apr 2025 – Aug 2025
-- Designed the RAG and generative AI subsystem for an intelligent course-material assistant.
+- Designed the RAG and generative AI subsystem for an intelligent course-material assistant using Python, LangChain, and Weaviate.
+- Full write-up: [/projects/lecture-bot/](https://carloslme.com/projects/lecture-bot/) | Repo: [team-LECture-bot](https://github.com/AET-DevOps25/team-LECture-bot)
+
+### AI Travel Journal Assistant
+Apr 2025 – Aug 2025
+- Full-stack travel journal assistant with React, FastAPI, PostgreSQL, Docker, and GenAI image microservice.
+- Full write-up: [/projects/travel-journal/](https://carloslme.com/projects/travel-journal/) | Repo: [Team-W4](https://github.com/projects-in-RS-SS25/Team-W4)
+
+### TUM IDP: LLM Tooling Framework
+Oct 2024 – May 2025
+- Framework automating the transition of research tools to production applications using Python and Gemini.
+- Full write-up: [/projects/tum-idp/](https://carloslme.com/projects/tum-idp/) | Repo: [tum-idp](https://github.com/carloslme/tum-idp)
+
+### ADLM Medical Image Segmentation
+Apr 2024 – Aug 2024
+- Medical image segmentation research analyzing resolution differences using PyTorch and nnU-Net.
+- Full write-up: [/projects/adlm-segmentation/](https://carloslme.com/projects/adlm-segmentation/) | Repo: [adlm-segmentation](https://github.com/carloslme/adlm-segmentation)
 
 ## Skills
 
-- Cloud: AWS, Terraform, AWS CDK, EMR, Athena, Glue, Step Functions, QuickSight, IAM, KMS, VPC
-- Data: Python, SQL, Spark (PySpark), Kafka, Airflow, ETL/ELT, Airbyte, dbt
+- Cloud: AWS, GCP, Terraform, AWS CDK, EMR, Athena, Glue, Step Functions, QuickSight, IAM, KMS, VPC
+- Data: Python (Pandas, NumPy, PyTorch, Matplotlib), SQL, Spark (PySpark), Kafka, Airflow, ETL/ELT, Airbyte, dbt
 - MLOps & DevOps: Docker, GitHub Actions, FastAPI, Pytest, Django
-- ML/AI: Scikit-learn, TensorFlow, Keras, OpenCV, NLP, Computer Vision, nnU-Net
+- ML/AI: Scikit-learn, TensorFlow, Keras, OpenAI API, Gemini, OpenCV, NLP, Computer Vision, nnU-Net
 
 ## Education
 
 - Technical University of Munich: M.Sc. in Informatics (Oct 2023 to Expected Apr 2027)
 - Instituto Politécnico Nacional: B.Sc. in Computer System Engineering (Jan 2015 to Jul 2020)
-
-## Master's Thesis
-
-- Knowledge Graph-Augmented RAG for Automotive Safety Case Generation, TUM Chair of Robotics, AI and Real-Time Systems, advised by Prof. Alois Knoll and André Schamschurko.
-- Registration is pending, expected start Aug 2026.
-- The thesis will evaluate a Knowledge Graph retrieval layer for CeCaS, compare it with RegulaRAG and HippoRAG, and measure precision, recall, F1, and success or failure rate metrics.
+- Universidad de Caldas: Student Exchange in Computer System Engineering (Jan 2019 to Jul 2019)
 
 ## Languages
 

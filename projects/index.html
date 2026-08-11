@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Projects | Carlos Lopez Mejia</title>
+    <meta name="description" content="Technical projects, research, and write-ups by Carlos Lopez Mejia." />
     <link rel="stylesheet" href="/assets/css/cv.css" />
   </head>
   <body>
@@ -20,26 +21,76 @@
     </header>
 
     <main class="container" style="padding: 2rem 0 3rem;">
-      <section class="card">
+      <!-- Special Featured Section: Master's Thesis -->
+      <section class="card" style="border: 1px solid rgba(79, 172, 254, 0.4); background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%);">
+        <p class="eyebrow" style="color: #60a5fa; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Special Feature &bull; Master's Thesis</p>
+        <h2 style="margin-top: 0; font-size: 1.5rem;"><a href="/projects/masters-thesis/" style="color: inherit; text-decoration: none;">Knowledge Graph-Augmented RAG for Automotive Safety Case Generation</a></h2>
+        <p class="dates">Expected start Aug 2026 (Registration Pending) &bull; TUM Chair of Robotics, AI and Real-Time Systems</p>
+        <p>
+          Designing and evaluating a structured Knowledge Graph retrieval layer to replace flat vector-based RAG in CeCaS, a pipeline generating Ecore and OCL safety case code from UN Regulation 152. Benchmarking against RegulaRAG and HippoRAG.
+        </p>
+        <p style="margin-bottom: 0;"><a href="/projects/masters-thesis/" style="font-weight: 600;">View Thesis Details & Living Log &rarr;</a></p>
+      </section>
+
+      <section class="card" style="margin-top: 1.5rem;">
         <h1 class="section-title">Projects</h1>
-        <p class="meta">A selection of technical projects and write-ups. Entries are listed newest first.</p>
+        <p class="meta">A selection of technical projects and write-ups. Listed newest first.</p>
 
         <div class="entry">
-          <h3>Salsuki</h3>
-          <p class="dates">2024 – Current</p>
+          <h3>Salsuki: Community Management Platform</h3>
+          <p class="dates">2024 – Current &bull; Full-Stack, Solo Engineer</p>
           <p>
-            A community management platform for a non-profit salsa school. Full-stack system built with Supabase on the backend and a React 19/TypeScript frontend on Vercel. Includes bookings, wallet credits, waitlists, and an integrated learning resource library.
+            A community platform for a non-profit salsa school with 60+ active users. Built with Supabase (Postgres, RLS, Edge Functions) and React 19/TypeScript on Vercel. Features credit ledger accounting, booking waitlists, and an interactive dance prerequisite graph.
           </p>
-          <p><a href="/projects/salsuki/">Read the full write-up</a></p>
+          <p><a href="/projects/salsuki/">Read the full write-up &rarr;</a></p>
         </div>
 
         <div class="entry">
-          <h3>LECture-bot: GenAI course assistant</h3>
-          <p class="dates">Apr 2025 – Aug 2025</p>
+          <h3>LECture-bot: GenAI Course Assistant</h3>
+          <p class="dates">Apr 2025 – Aug 2025 &bull; TUM DevOps Course</p>
           <p>
-            Designed the RAG and generative AI subsystem for a course assistant. Document processing, vector store, and integrations with cloud and local LLMs.
+            Designed the RAG and generative AI subsystem for an intelligent course material assistant. LangChain microservice with document embedding, Weaviate vector database, and integrations with cloud and local LLMs.
           </p>
-          <p><a href="https://github.com/AET-DevOps25/team-LECture-bot" target="_blank" rel="noreferrer">Repository</a></p>
+          <p>
+            <a href="/projects/lecture-bot/">Read write-up</a> &bull; 
+            <a href="https://github.com/AET-DevOps25/team-LECture-bot" target="_blank" rel="noreferrer">GitHub Repository</a>
+          </p>
+        </div>
+
+        <div class="entry">
+          <h3>AI Travel Journal Assistant</h3>
+          <p class="dates">Apr 2025 – Aug 2025 &bull; TUM Connected Mobility Lab</p>
+          <p>
+            Full-stack AI-powered travel journal assistant integrating React, FastAPI, PostgreSQL, and Docker. Led GenAI vision microservice for automated photo analysis and timeline creation.
+          </p>
+          <p>
+            <a href="/projects/travel-journal/">Read write-up</a> &bull; 
+            <a href="https://github.com/projects-in-RS-SS25/Team-W4" target="_blank" rel="noreferrer">GitHub Repository</a>
+          </p>
+        </div>
+
+        <div class="entry">
+          <h3>TUM IDP: LLM Tooling Framework</h3>
+          <p class="dates">Oct 2024 – May 2025 &bull; TUM Interdisciplinary Project</p>
+          <p>
+            A framework designed to reduce manual effort in transitioning research-stage software tools to professional production applications using LLM models (Python and Gemini).
+          </p>
+          <p>
+            <a href="/projects/tum-idp/">Read write-up</a> &bull; 
+            <a href="https://github.com/carloslme/tum-idp" target="_blank" rel="noreferrer">GitHub Repository</a>
+          </p>
+        </div>
+
+        <div class="entry">
+          <h3>ADLM Medical Image Segmentation</h3>
+          <p class="dates">Apr 2024 – Aug 2024 &bull; TUM Chair for AI in Medicine</p>
+          <p>
+            Research project investigating resolution differences and state-of-the-art segmentation techniques on 3D medical images using PyTorch, Deep Learning, and nnU-Net.
+          </p>
+          <p>
+            <a href="/projects/adlm-segmentation/">Read write-up</a> &bull; 
+            <a href="https://github.com/carloslme/adlm-segmentation" target="_blank" rel="noreferrer">GitHub Repository</a>
+          </p>
         </div>
       </section>
     </main>

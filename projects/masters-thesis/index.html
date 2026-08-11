@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Master's Thesis | Projects | Carlos Lopez Mejia</title>
+    <meta name="description" content="Knowledge Graph-Augmented RAG for Automotive Safety Case Generation. TUM Master's Thesis research." />
+    <link rel="stylesheet" href="/assets/css/cv.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="/">CARLOS LOPEZ MEJIA</a>
+        <nav class="nav-links">
+          <a href="/">Home</a>
+          <a href="/projects/">Projects</a>
+          <a href="/cv/">Full CV</a>
+          <a href="/assets/pdf/Carlos_Lopez_CV_Master.pdf">Download PDF</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" style="padding: 2rem 0 3rem;">
+      <section class="card">
+        <p class="eyebrow" style="color: var(--color-primary); font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Special Feature &bull; Master's Thesis</p>
+        <h1 class="section-title" style="margin-top: 0;">Knowledge Graph-Augmented RAG for Automotive Safety Case Generation</h1>
+        <p class="dates">Expected start Aug 2026 (Registration Pending)</p>
+        
+        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 1.25rem; margin: 1.5rem 0;">
+          <p style="margin: 0 0 0.5rem 0;"><strong>Institution:</strong> Technical University of Munich (TUM)</p>
+          <p style="margin: 0 0 0.5rem 0;"><strong>Chair:</strong> Chair of Robotics, AI and Real-Time Systems (Prof. Alois Knoll)</p>
+          <p style="margin: 0;"><strong>Advisor:</strong> André Schamschurko</p>
+        </div>
+
+        <h2>Overview</h2>
+        <p>
+          This thesis investigates a novel retrieval layer for Retrieval-Augmented Generation (RAG) in safety-critical automated software generation. By replacing flat vector-based RAG with a structured Knowledge Graph retrieval layer, the project aims to retain regulatory semantics and structural dependencies required for safety case compliance.
+        </p>
+        <p>
+          The domain focus is <strong>CeCaS</strong>, an engineering pipeline designed to generate Ecore and OCL safety case code directly from automotive regulatory standards, specifically <strong>UN Regulation 152</strong> (Advanced Emergency Braking Systems for M1 and N1 vehicles).
+        </p>
+
+        <h2>Research Objectives and Methodology</h2>
+        <ul>
+          <li><strong>Knowledge Graph Retrieval Layer:</strong> Design and implement a structured Knowledge Graph layer that maps regulatory constraints, vehicle operational design domains, and safety assertions.</li>
+          <li><strong>Hallucination Reduction:</strong> Quantify the reduction of hallucinated or syntactically invalid safety assertions during automated code generation compared to standard vector databases.</li>
+          <li><strong>Benchmarking Framework:</strong> Benchmark performance against a baseline RAG system (RegulaRAG) and HippoRAG.</li>
+          <li><strong>Evaluation Metrics:</strong> Evaluate retrieval and generation accuracy using Precision, Recall, F1 score, alongside syntax success and failure rates in generated Ecore/OCL code.</li>
+        </ul>
+
+        <h2>Living Project Updates</h2>
+        <p>
+          This page serves as the central living hub for updates regarding the thesis. Architecture diagrams, benchmark results, and publication materials will be added here as milestones are completed.
+        </p>
+
+        <p style="margin-top: 2rem;"><a href="/projects/">&larr; Back to Projects</a></p>
+      </section>
+    </main>
+  </body>
+</html>
