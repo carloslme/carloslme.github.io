@@ -63,7 +63,7 @@ Oct 2019 – Jan 2021
 2024 – Current
 - Built a full-stack platform for a non-profit salsa school with bookings, wallet balances, waitlists, and learning resources.
 - Delivered the frontend with React, TypeScript, Vite, and Tailwind CSS, and the backend with Supabase, Edge Functions, Auth, and Storage.
-- Link: https://salsuki-website.vercel.app/
+ - Website and full write-up: /projects/salsuki/
 
 ### DevOps Course: GenAI-Powered Web Application
 Apr 2025 – Aug 2025
