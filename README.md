@@ -81,6 +81,12 @@ Apr 2025 – Aug 2025
 - Technical University of Munich: M.Sc. in Informatics (Oct 2023 to Expected Apr 2027)
 - Instituto Politécnico Nacional: B.Sc. in Computer System Engineering (Jan 2015 to Jul 2020)
 
+## Master's Thesis
+
+- Knowledge Graph-Augmented RAG for Automotive Safety Case Generation, TUM Chair of Robotics, AI and Real-Time Systems, advised by Prof. Alois Knoll and André Schamschurko.
+- Registration is pending, expected start Aug 2026.
+- The thesis will evaluate a Knowledge Graph retrieval layer for CeCaS, compare it with RegulaRAG and HippoRAG, and measure precision, recall, F1, and success or failure rate metrics.
+
 ## Languages
 
 - Spanish: Native
