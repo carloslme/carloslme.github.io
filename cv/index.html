@@ -48,6 +48,7 @@
     </script>
 
     <link rel="stylesheet" href="/assets/css/cv.css" />
+    <script src="/assets/js/main.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -58,6 +59,7 @@
           <a href="/projects/">Projects</a>
           <a href="/cv/">CV</a>
           <a href="/assets/pdf/Carlos_Lopez_CV_Master.pdf">Download PDF</a>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">&#9790; Dark</button>
         </nav>
       </div>
     </header>
@@ -71,9 +73,13 @@
           <div class="actions">
             <a class="button primary" href="/assets/pdf/Carlos_Lopez_CV_Master.pdf">Download CV (PDF)</a>
             <a class="button secondary" href="mailto:carlos.mejia@tum.de">Contact</a>
+            <button class="button secondary" data-copy-email="carlos.mejia@tum.de">Copy Email</button>
           </div>
           <ul class="contact-list">
-            <li><a href="mailto:carlos.mejia@tum.de">carlos.mejia@tum.de</a></li>
+            <li>
+              <a href="mailto:carlos.mejia@tum.de">carlos.mejia@tum.de</a>
+              <button class="copy-pill" data-copy-email="carlos.mejia@tum.de">Copy</button>
+            </li>
             <li><a href="tel:+4915258443438">+49 152 5844 3438</a></li>
             <li><a href="https://carloslme.com/" target="_blank" rel="noreferrer">carloslme.com</a></li>
             <li><a href="https://www.linkedin.com/in/carloslme/" target="_blank" rel="noreferrer">linkedin.com/in/carloslme</a></li>

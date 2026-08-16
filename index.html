@@ -72,6 +72,7 @@
     </script>
 
     <link rel="stylesheet" href="/assets/css/cv.css" />
+    <script src="/assets/js/main.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -82,6 +83,7 @@
           <a href="/projects/">Projects</a>
           <a href="/cv/">Full CV</a>
           <a href="/assets/pdf/Carlos_Lopez_CV_Master.pdf">Download PDF</a>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">&#9790; Dark</button>
         </nav>
       </div>
     </header>
@@ -99,10 +101,14 @@
           <div class="actions">
             <a class="button primary" href="/cv/">View full CV</a>
             <a class="button secondary" href="/assets/pdf/Carlos_Lopez_CV_Master.pdf">Download CV (PDF)</a>
+            <button class="button secondary" data-copy-email="carlos.mejia@tum.de">Copy Email</button>
           </div>
           <ul class="contact-list">
             <li>Munich, Germany</li>
-            <li><a href="mailto:carlos.mejia@tum.de">carlos.mejia@tum.de</a></li>
+            <li>
+              <a href="mailto:carlos.mejia@tum.de">carlos.mejia@tum.de</a>
+              <button class="copy-pill" data-copy-email="carlos.mejia@tum.de">Copy</button>
+            </li>
             <li><a href="https://www.linkedin.com/in/carloslme/" target="_blank" rel="noreferrer">LinkedIn</a></li>
             <li><a href="https://www.github.com/carloslme" target="_blank" rel="noreferrer">GitHub</a></li>
           </ul>
