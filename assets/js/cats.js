@@ -130,15 +130,24 @@
           <span class="cat-zzz">Z</span>
           <span class="cat-zzz">z</span>
         </div>
-        <div class="cat-avatar-container" id="cat-avatar-container" title="Click to pet, double-click to toggle roam!">
+
+        <!-- Controls Floating Above Cat -->
+        <div class="cat-widget-controls" id="cat-widget-controls">
+          <button id="cat-switch-btn" class="cat-ctrl-btn" title="Switch Cat (Flamepoint / Ragdoll)" aria-label="Switch Cat">&#128257; Switch</button>
+          <button id="cat-roam-btn" class="cat-ctrl-btn" title="Walk / Roam Screen" aria-label="Walk Screen">&#128062; Walk</button>
+          <button id="cat-modal-btn" class="cat-ctrl-btn" title="Meet the Reviewers" aria-label="Meet Reviewers">&#128247; Meet</button>
+          <button id="cat-close-btn" class="cat-ctrl-btn" title="Minimize Cat" aria-label="Minimize Companion">&minus;</button>
+        </div>
+
+        <!-- Cat Avatar -->
+        <div class="cat-avatar-container" id="cat-avatar-container" title="Click to pet or wake up!">
           <div id="cat-avatar-render"></div>
         </div>
-        <div class="cat-widget-controls">
-          <button id="cat-switch-btn" class="cat-ctrl-btn" title="Switch Cat" aria-label="Switch Cat">&#128257;</button>
-          <button id="cat-roam-btn" class="cat-ctrl-btn" title="Toggle Walk/Roam" aria-label="Toggle Walk/Roam">&#128062;</button>
-          <button id="cat-modal-btn" class="cat-ctrl-btn" title="Meet the Reviewers" aria-label="Meet Reviewers">&#128247;</button>
-          <button id="cat-close-btn" class="cat-ctrl-btn" title="Minimize Cat" aria-label="Minimize Companion">&times;</button>
-        </div>
+
+        <!-- Minimized Restore Pill -->
+        <button id="cat-restore-pill" class="cat-restore-pill" title="Click to summon cat companion">
+          &#128049; <span>Carlos's Cats &#9650;</span>
+        </button>
       </div>
 
       <!-- Modal: Meet the Senior Code Reviewers -->
@@ -450,15 +459,38 @@
       }
     });
 
+    const restorePill = document.getElementById('cat-restore-pill');
+
+    function toggleMinimize(forceState) {
+      const widget = document.getElementById('cat-widget');
+      if (!widget) return;
+
+      if (typeof forceState === 'boolean') {
+        if (forceState) widget.classList.add('is-minimized');
+        else widget.classList.remove('is-minimized');
+      } else {
+        widget.classList.toggle('is-minimized');
+      }
+
+      const isMin = widget.classList.contains('is-minimized');
+      localStorage.setItem(STORAGE_KEY, isMin ? 'hidden' : 'visible');
+
+      if (!isMin) {
+        showCatQuote("I'm back! Purr 🐾");
+      }
+    }
+
     if (closeBtn) {
       closeBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        const widget = document.getElementById('cat-widget');
-        if (widget) {
-          widget.classList.toggle('is-minimized');
-          const isMin = widget.classList.contains('is-minimized');
-          localStorage.setItem(STORAGE_KEY, isMin ? 'hidden' : 'visible');
-        }
+        toggleMinimize(true);
+      });
+    }
+
+    if (restorePill) {
+      restorePill.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMinimize(false);
       });
     }
   }

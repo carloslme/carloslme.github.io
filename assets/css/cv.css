@@ -726,12 +726,43 @@ h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 0.5rem; }
 }
 
 .cat-widget.is-minimized {
-  transform: translateY(calc(100% - 24px)) scale(0.85);
-  opacity: 0.6;
-}
-.cat-widget.is-minimized:hover {
+  transform: none;
   opacity: 1;
-  transform: translateY(calc(100% - 32px)) scale(0.9);
+}
+
+.cat-widget.is-minimized .cat-avatar-container,
+.cat-widget.is-minimized .cat-widget-controls,
+.cat-widget.is-minimized .cat-speech,
+.cat-widget.is-minimized .cat-zzz-container {
+  display: none !important;
+}
+
+.cat-restore-pill {
+  display: none;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.cat-restore-pill:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(2, 132, 199, 0.2);
+}
+
+.cat-widget.is-minimized .cat-restore-pill {
+  display: inline-flex;
 }
 
 /* Walking State */
@@ -924,16 +955,19 @@ h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 0.5rem; }
   transition: transform 0.2s ease;
 }
 
-/* Mini Controls under Cat */
+/* Floating Controls above Cat */
 .cat-widget-controls {
   display: flex;
+  align-items: center;
   gap: 0.25rem;
-  margin-top: -4px;
+  margin-bottom: 0.35rem;
   background: var(--panel);
   border: 1px solid var(--border);
-  padding: 0.2rem 0.4rem;
+  padding: 0.2rem 0.45rem;
   border-radius: 999px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  z-index: 15;
 }
 
 .cat-ctrl-btn {
@@ -941,11 +975,15 @@ h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 0.5rem; }
   border: none;
   color: var(--muted);
   cursor: pointer;
-  font-size: 0.8rem;
-  padding: 0.15rem 0.35rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 0.2rem 0.45rem;
   border-radius: 999px;
   transition: all 0.15s ease;
   line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
 }
 
 .cat-ctrl-btn:hover {
