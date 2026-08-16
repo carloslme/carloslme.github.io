@@ -1,20 +1,20 @@
-// Interactive Cat Companion & Easter Egg Engine
+// Interactive Roaming Cat Companion, Hunter, & Easter Egg Engine
 (function () {
   const STORAGE_KEY = 'carloslme-cat-companion';
 
   // SVG Artwork for Carlos's Two Cats:
-  // Cat 1: Flame-Point Siamese (cream fur, flame/orange ears & nose, sky blue collar, blue eyes)
+  // Cat 1: Flame-Point Siamese (cream fur, flame ears/face, sky blue collar, blue eyes)
   // Cat 2: Seal-Bicolor Ragdoll (fluffy coat, dark mask/face patch, blue eyes, white chest)
   const CAT_AVATARS = {
     flamepoint: `
-      <svg class="cat-svg" viewBox="0 0 100 90" width="80" height="72" xmlns="http://www.w3.org/2000/svg">
+      <svg class="cat-svg" viewBox="0 0 100 90" width="84" height="76" xmlns="http://www.w3.org/2000/svg">
         <!-- Tail -->
         <path class="cat-tail" d="M22 65 C12 60, 5 45, 12 35 C15 30, 22 34, 19 42 C16 48, 22 55, 30 60 Z" fill="#edd6b8"/>
-        <!-- Body (Loaf) -->
+        <!-- Body (Loaf/Walk) -->
         <ellipse cx="50" cy="62" rx="32" ry="20" fill="#faf5eb" stroke="#e8dcce" stroke-width="1.5"/>
-        <!-- Paws -->
-        <ellipse cx="40" cy="74" rx="8" ry="5" fill="#f5ede0" />
-        <ellipse cx="60" cy="74" rx="8" ry="5" fill="#f5ede0" />
+        <!-- Paws with walk classes -->
+        <ellipse class="cat-front-paw-left" cx="38" cy="74" rx="8" ry="5" fill="#f5ede0" />
+        <ellipse class="cat-front-paw-right" cx="62" cy="74" rx="8" ry="5" fill="#f5ede0" />
         <!-- Head -->
         <circle cx="50" cy="40" r="22" fill="#fffaf2" stroke="#e8dcce" stroke-width="1.5"/>
         <!-- Ears -->
@@ -25,12 +25,12 @@
         <!-- Flame-Point Face Gradient / Markings -->
         <ellipse cx="50" cy="38" rx="14" ry="12" fill="#fcdbbd" opacity="0.6"/>
         <!-- Eyes -->
-        <ellipse class="cat-eye" cx="42" cy="38" rx="3.8" ry="4.5" fill="#38bdf8"/>
-        <circle cx="43" cy="36.5" r="1.5" fill="#ffffff"/>
-        <circle cx="42" cy="38" r="2.2" fill="#0369a1"/>
-        <ellipse class="cat-eye" cx="58" cy="38" rx="3.8" ry="4.5" fill="#38bdf8"/>
-        <circle cx="59" cy="36.5" r="1.5" fill="#ffffff"/>
-        <circle cx="58" cy="38" r="2.2" fill="#0369a1"/>
+        <ellipse class="cat-eye cat-eye-left" cx="42" cy="38" rx="3.8" ry="4.5" fill="#38bdf8"/>
+        <circle class="cat-pupil-left" cx="42" cy="38" r="2.2" fill="#0369a1"/>
+        <circle cx="43" cy="36.5" r="1.4" fill="#ffffff"/>
+        <ellipse class="cat-eye cat-eye-right" cx="58" cy="38" rx="3.8" ry="4.5" fill="#38bdf8"/>
+        <circle class="cat-pupil-right" cx="58" cy="38" r="2.2" fill="#0369a1"/>
+        <circle cx="59" cy="36.5" r="1.4" fill="#ffffff"/>
         <!-- Nose & Mouth -->
         <polygon points="50,44 47,41 53,41" fill="#f48fb1"/>
         <path d="M47 45 Q50 48 53 45" stroke="#ba7070" stroke-width="1.2" fill="none" stroke-linecap="round"/>
@@ -45,15 +45,15 @@
       </svg>
     `,
     ragdoll: `
-      <svg class="cat-svg" viewBox="0 0 100 90" width="80" height="72" xmlns="http://www.w3.org/2000/svg">
+      <svg class="cat-svg" viewBox="0 0 100 90" width="84" height="76" xmlns="http://www.w3.org/2000/svg">
         <!-- Fluffy Tail -->
         <path class="cat-tail" d="M20 64 C8 58, 2 40, 10 28 C16 20, 24 26, 21 38 C18 48, 25 56, 32 60 Z" fill="#6d5345"/>
         <!-- Fluffy Body -->
         <ellipse cx="50" cy="62" rx="34" ry="21" fill="#fdfbf7" stroke="#d5c8be" stroke-width="1.5"/>
         <path d="M26 56 Q38 48 50 48 Q62 48 74 56 Q66 76 50 78 Q34 76 26 56 Z" fill="#f5ede3"/>
-        <!-- Paws -->
-        <ellipse cx="38" cy="75" rx="9" ry="5.5" fill="#ffffff" stroke="#e8dcce" stroke-width="1"/>
-        <ellipse cx="62" cy="75" rx="9" ry="5.5" fill="#ffffff" stroke="#e8dcce" stroke-width="1"/>
+        <!-- Paws with walk classes -->
+        <ellipse class="cat-front-paw-left" cx="38" cy="75" rx="9" ry="5.5" fill="#ffffff" stroke="#e8dcce" stroke-width="1"/>
+        <ellipse class="cat-front-paw-right" cx="62" cy="75" rx="9" ry="5.5" fill="#ffffff" stroke="#e8dcce" stroke-width="1"/>
         <!-- Head -->
         <circle cx="50" cy="40" r="23" fill="#ffffff" stroke="#d5c8be" stroke-width="1.5"/>
         <!-- Ears -->
@@ -66,12 +66,12 @@
         <!-- White inverted V blaze -->
         <polygon points="50,30 43,48 57,48" fill="#ffffff"/>
         <!-- Blue Eyes -->
-        <ellipse class="cat-eye" cx="42" cy="38" rx="3.8" ry="4.5" fill="#38bdf8"/>
-        <circle cx="43" cy="36.5" r="1.5" fill="#ffffff"/>
-        <circle cx="42" cy="38" r="2.2" fill="#0369a1"/>
-        <ellipse class="cat-eye" cx="58" cy="38" rx="3.8" ry="4.5" fill="#38bdf8"/>
-        <circle cx="59" cy="36.5" r="1.5" fill="#ffffff"/>
-        <circle cx="58" cy="38" r="2.2" fill="#0369a1"/>
+        <ellipse class="cat-eye cat-eye-left" cx="42" cy="38" rx="3.8" ry="4.5" fill="#38bdf8"/>
+        <circle class="cat-pupil-left" cx="42" cy="38" r="2.2" fill="#0369a1"/>
+        <circle cx="43" cy="36.5" r="1.4" fill="#ffffff"/>
+        <ellipse class="cat-eye cat-eye-right" cx="58" cy="38" rx="3.8" ry="4.5" fill="#38bdf8"/>
+        <circle class="cat-pupil-right" cx="58" cy="38" r="2.2" fill="#0369a1"/>
+        <circle cx="59" cy="36.5" r="1.4" fill="#ffffff"/>
         <!-- Nose & Mouth -->
         <polygon points="50,45 47.5,42 52.5,42" fill="#d9777f"/>
         <path d="M47 46 Q50 49 53 46" stroke="#4a372d" stroke-width="1.2" fill="none" stroke-linecap="round"/>
@@ -91,14 +91,27 @@
     "100% test scenario coverage achieved (and napped on) ✨",
     "Did someone say Kubernetes or tuna feast? 🐟",
     "Currently running multi-cluster purr orchestration ⚡",
-    "Carlos's senior code reviewer on duty! 🐾"
+    "Carlos's senior code reviewer on duty! 🐾",
+    "Fast cursor detected! Preparing pounce maneuver 🎯",
+    "Caught your cursor! Purr mission accomplished 😼"
   ];
 
   let currentCatType = 'flamepoint';
-  let isScrollingTimeout = null;
+  let catState = 'idle'; // 'idle', 'walking', 'napping', 'hunting', 'pouncing'
+  let posX = 0;
+  let posY = 0;
+  let targetX = 0;
+  let isFacingLeft = false;
+  let roamInterval = null;
+  let stateTimer = null;
+
+  // Mouse velocity tracker for cursor hunting
+  let lastMouseX = 0;
+  let lastMouseY = 0;
+  let lastMouseTime = 0;
+  let mouseSpeed = 0;
 
   function initCatCompanion() {
-    // Inject HTML Structure for Cat Companion & Reviewers Modal
     const wrapper = document.createElement('div');
     wrapper.id = 'cat-companion-root';
     wrapper.innerHTML = `
@@ -109,16 +122,22 @@
         </div>
       </div>
 
-      <!-- Floating Bottom-Right Companion -->
+      <!-- Floating & Roaming Cat Companion -->
       <div id="cat-widget" class="cat-widget" aria-label="Interactive Cat Companion">
         <div id="cat-speech" class="cat-speech">Purr! Welcome to Carlos's site 🐾</div>
-        <div class="cat-avatar-container" id="cat-avatar-container" title="Click to pet or meet the cats!">
+        <div id="cat-zzz-box" class="cat-zzz-container" style="display: none;">
+          <span class="cat-zzz">z</span>
+          <span class="cat-zzz">Z</span>
+          <span class="cat-zzz">z</span>
+        </div>
+        <div class="cat-avatar-container" id="cat-avatar-container" title="Click to pet, double-click to toggle roam!">
           <div id="cat-avatar-render"></div>
         </div>
         <div class="cat-widget-controls">
           <button id="cat-switch-btn" class="cat-ctrl-btn" title="Switch Cat" aria-label="Switch Cat">&#128257;</button>
-          <button id="cat-modal-btn" class="cat-ctrl-btn" title="Meet the Cats" aria-label="Meet the Cats">&#128062;</button>
-          <button id="cat-close-btn" class="cat-ctrl-btn" title="Hide Cat Companion" aria-label="Hide Companion">&times;</button>
+          <button id="cat-roam-btn" class="cat-ctrl-btn" title="Toggle Walk/Roam" aria-label="Toggle Walk/Roam">&#128062;</button>
+          <button id="cat-modal-btn" class="cat-ctrl-btn" title="Meet the Reviewers" aria-label="Meet Reviewers">&#128247;</button>
+          <button id="cat-close-btn" class="cat-ctrl-btn" title="Minimize Cat" aria-label="Minimize Companion">&times;</button>
         </div>
       </div>
 
@@ -186,6 +205,8 @@
     renderCatAvatar();
     attachCatEventListeners();
     initScrollTracking();
+    initCursorHunter();
+    initAutonomousBehavior();
   }
 
   function renderCatAvatar() {
@@ -204,12 +225,169 @@
     clearTimeout(bubble._timeout);
     bubble._timeout = setTimeout(() => {
       bubble.classList.remove('show');
-    }, 3500);
+    }, 3200);
+  }
+
+  function setCatState(newState) {
+    const widget = document.getElementById('cat-widget');
+    const zzzBox = document.getElementById('cat-zzz-box');
+    if (!widget) return;
+
+    widget.classList.remove('is-walking', 'is-hunting', 'is-pouncing', 'is-napping');
+    if (zzzBox) zzzBox.style.display = 'none';
+
+    catState = newState;
+
+    if (newState === 'walking') {
+      widget.classList.add('is-walking');
+    } else if (newState === 'hunting') {
+      widget.classList.add('is-hunting');
+    } else if (newState === 'pouncing') {
+      widget.classList.add('is-pouncing');
+    } else if (newState === 'napping') {
+      widget.classList.add('is-napping');
+      if (zzzBox) zzzBox.style.display = 'block';
+    }
+  }
+
+  // Autonomous Walk, Loaf, and Nap Behavior
+  function initAutonomousBehavior() {
+    function pickNextBehavior() {
+      const widget = document.getElementById('cat-widget');
+      if (!widget || widget.classList.contains('is-minimized') || catState === 'hunting' || catState === 'pouncing') {
+        stateTimer = setTimeout(pickNextBehavior, 5000);
+        return;
+      }
+
+      const behaviors = ['walk', 'nap', 'loaf', 'loaf'];
+      const action = behaviors[Math.floor(Math.random() * behaviors.length)];
+
+      if (action === 'walk') {
+        startWalking();
+      } else if (action === 'nap') {
+        setCatState('napping');
+        showCatQuote("Taking a quick senior reviewer catnap... Zzz 😴");
+        stateTimer = setTimeout(pickNextBehavior, 7000 + Math.random() * 5000);
+      } else {
+        setCatState('idle');
+        stateTimer = setTimeout(pickNextBehavior, 4000 + Math.random() * 4000);
+      }
+    }
+
+    stateTimer = setTimeout(pickNextBehavior, 6000);
+  }
+
+  function startWalking() {
+    const widget = document.getElementById('cat-widget');
+    if (!widget) return;
+
+    setCatState('walking');
+    widget.classList.add('is-roaming');
+
+    // Choose random destination on screen bottom
+    const margin = 80;
+    const maxX = Math.max(100, window.innerWidth - margin);
+    const destinationX = Math.floor(Math.random() * (maxX - margin)) + margin;
+
+    const currentX = widget.offsetLeft || (window.innerWidth - 100);
+    isFacingLeft = destinationX < currentX;
+    updateFacingDirection();
+
+    const speed = 70; // px per second
+    const distance = Math.abs(destinationX - currentX);
+    const duration = Math.max(1.5, distance / speed);
+
+    widget.style.transition = `left ${duration}s ease-in-out, top 0.4s ease`;
+    widget.style.right = 'auto';
+    widget.style.bottom = '1.5rem';
+    widget.style.left = `${destinationX}px`;
+
+    clearTimeout(roamInterval);
+    roamInterval = setTimeout(() => {
+      // Suddenly lie down / loaf after walking!
+      if (Math.random() > 0.4) {
+        setCatState('napping');
+        showCatQuote("Walked over here. Perfect spot to lie down! 🛋️");
+      } else {
+        setCatState('idle');
+      }
+    }, duration * 1000);
+  }
+
+  function updateFacingDirection() {
+    const avatar = document.getElementById('cat-avatar-container');
+    if (avatar) {
+      avatar.style.transform = isFacingLeft ? 'scaleX(-1)' : 'scaleX(1)';
+    }
+  }
+
+  // Fast Mouse Tracking & Cursor Hunting Engine
+  function initCursorHunter() {
+    window.addEventListener('mousemove', (e) => {
+      const now = performance.now();
+      if (lastMouseTime > 0) {
+        const dt = (now - lastMouseTime) / 1000;
+        if (dt > 0) {
+          const dist = Math.hypot(e.clientX - lastMouseX, e.clientY - lastMouseY);
+          mouseSpeed = dist / dt;
+
+          // Fast mouse speed triggers hunting behavior!
+          if (mouseSpeed > 1000 && catState !== 'hunting' && catState !== 'pouncing') {
+            triggerCursorHunt(e.clientX, e.clientY);
+          }
+        }
+      }
+      lastMouseX = e.clientX;
+      lastMouseY = e.clientY;
+      lastMouseTime = now;
+    }, { passive: true });
+  }
+
+  function triggerCursorHunt(targetClientX, targetClientY) {
+    const widget = document.getElementById('cat-widget');
+    if (!widget || widget.classList.contains('is-minimized')) return;
+
+    clearTimeout(stateTimer);
+    clearTimeout(roamInterval);
+
+    // 1. Alert & Butt Wiggle phase
+    setCatState('hunting');
+    isFacingLeft = targetClientX < (widget.offsetLeft || window.innerWidth / 2);
+    updateFacingDirection();
+    showCatQuote("👀 Fast target detected! Wiggling butt... 🎯");
+
+    setTimeout(() => {
+      // 2. Swift Pounce Leap phase
+      setCatState('pouncing');
+      widget.classList.add('is-roaming');
+
+      const landingX = Math.max(30, Math.min(window.innerWidth - 110, targetClientX - 40));
+      const landingY = Math.max(60, Math.min(window.innerHeight - 100, targetClientY - 30));
+
+      widget.style.transition = 'left 0.35s cubic-bezier(0.22, 1, 0.36, 1), top 0.35s cubic-bezier(0.22, 1, 0.36, 1)';
+      widget.style.right = 'auto';
+      widget.style.bottom = 'auto';
+      widget.style.left = `${landingX}px`;
+      widget.style.top = `${landingY}px`;
+
+      setTimeout(() => {
+        // 3. Landed & Pounced!
+        showCatQuote("🐾 Pounce! Got your cursor! 😸");
+        setCatState('idle');
+
+        // Return slowly to bottom after a moment
+        setTimeout(() => {
+          widget.style.transition = 'top 0.8s ease-in-out, left 0.8s ease-in-out';
+          widget.style.top = `${window.innerHeight - 100}px`;
+        }, 3000);
+      }, 450);
+    }, 550);
   }
 
   function attachCatEventListeners() {
     const avatar = document.getElementById('cat-avatar-container');
     const switchBtn = document.getElementById('cat-switch-btn');
+    const roamBtn = document.getElementById('cat-roam-btn');
     const modalBtn = document.getElementById('cat-modal-btn');
     const closeBtn = document.getElementById('cat-close-btn');
     const modal = document.getElementById('cat-modal');
@@ -218,9 +396,14 @@
 
     if (avatar) {
       avatar.addEventListener('click', () => {
-        avatar.classList.add('bouncing');
-        setTimeout(() => avatar.classList.remove('bouncing'), 600);
-        showCatQuote();
+        if (catState === 'napping') {
+          setCatState('idle');
+          showCatQuote("Woke up from catnap! Purr 🐾");
+        } else {
+          avatar.classList.add('bouncing');
+          setTimeout(() => avatar.classList.remove('bouncing'), 600);
+          showCatQuote();
+        }
       });
     }
 
@@ -230,6 +413,14 @@
         currentCatType = currentCatType === 'flamepoint' ? 'ragdoll' : 'flamepoint';
         renderCatAvatar();
         showCatQuote(currentCatType === 'flamepoint' ? "Switched to Flame-Point Siamese! 🐾" : "Switched to Seal-Bicolor Ragdoll! 🐾");
+      });
+    }
+
+    if (roamBtn) {
+      roamBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        startWalking();
+        showCatQuote("Off on patrol across the screen! 🐾");
       });
     }
 
@@ -275,7 +466,6 @@
   function initScrollTracking() {
     const progressBar = document.getElementById('cat-scroll-progress');
     const runner = document.getElementById('cat-runner');
-    const avatar = document.getElementById('cat-avatar-container');
 
     window.addEventListener('scroll', () => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -287,14 +477,6 @@
       }
       if (runner) {
         runner.style.transform = `scaleX(${scrollPercent > 50 ? -1 : 1})`;
-      }
-
-      if (avatar) {
-        avatar.classList.add('is-scrolling');
-        clearTimeout(isScrollingTimeout);
-        isScrollingTimeout = setTimeout(() => {
-          avatar.classList.remove('is-scrolling');
-        }, 180);
       }
     }, { passive: true });
   }
