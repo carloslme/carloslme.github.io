@@ -11,9 +11,9 @@ plugins:
 
 # Configuración básica de SEO
 seo:
-  title: "Carlos Website"  # Título del sitio
-  description: "This is a site to learn"  # Descripción breve del sitio
-  url: "https://carloslme.github.io"  # URL del sitio
+  title: "Carlos Lopez Mejia"
+  description: "Cloud & Data Engineer based in Munich, specializing in AWS infrastructure-as-code, multi-environment data platforms, DevOps, and MLOps."
+  url: "https://carloslme.com"
 
 # Configuración de Google Analytics
 google_analytics: G-KBS9DVHWCN  # ID de seguimiento de Google Analytics
