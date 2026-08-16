@@ -59,9 +59,9 @@ Oct 2019 – Jan 2021
 
 ## Master's Thesis
 
-- **Knowledge Graph-Augmented RAG for Automotive Safety Case Generation**, TUM Chair of Robotics, AI and Real-Time Systems, advised by Prof. Alois Knoll and André Schamschurko.
-- Registration is pending, expected start Aug 2026.
-- The thesis evaluates a Knowledge Graph retrieval layer for CeCaS (UN Regulation 152 safety case code generation), comparing performance against RegulaRAG and HippoRAG.
+- **KG Construction and Retrieval for LLM-Based Test Scenario Generation from Automotive Regulations**, TUM Chair of Robotics, AI and Real-Time Systems, advised by Prof. Alois Knoll and André Schamschurko.
+- Implementation underway.
+- Designing and evaluating a structured Knowledge Graph retrieval layer to improve LLM-based generation of test scenarios (speed / load condition / post-condition tuples) from automotive regulations (UN Regulation 152). Benchmarked against three systems: RegulaRAG, LightRAG, and HippoRAG 2.
 - Full details & living log: [/projects/masters-thesis/](https://carloslme.com/projects/masters-thesis/)
 
 ## Projects
