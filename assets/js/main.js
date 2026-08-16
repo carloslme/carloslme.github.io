@@ -57,23 +57,24 @@
       });
     });
 
-    // Project Tag Filter
-    const filterBtns = document.querySelectorAll('.filter-btn');
+    // Project Tag Filter (on /projects/)
+    const projectFilterBtns = document.querySelectorAll('.project-filter-btn, .filter-btn:not(.timeline-filter-btn)');
     const projectCards = document.querySelectorAll('.project-card');
 
-    if (filterBtns.length > 0 && projectCards.length > 0) {
-      filterBtns.forEach((btn) => {
-        btn.addEventListener('click', () => {
-          filterBtns.forEach((b) => b.classList.remove('active'));
+    if (projectFilterBtns.length > 0 && projectCards.length > 0) {
+      projectFilterBtns.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          projectFilterBtns.forEach((b) => b.classList.remove('active'));
           btn.classList.add('active');
 
-          const filter = btn.getAttribute('data-filter') || 'all';
+          const filter = (btn.getAttribute('data-filter') || 'all').toLowerCase();
 
           projectCards.forEach((card) => {
             if (filter === 'all') {
               card.classList.remove('is-hidden');
             } else {
-              const tags = (card.getAttribute('data-tags') || '').split(' ');
+              const tags = (card.getAttribute('data-tags') || '').toLowerCase().split(/[\s,]+/);
               if (tags.includes(filter)) {
                 card.classList.remove('is-hidden');
               } else {
@@ -91,17 +92,18 @@
 
     if (timelineFilterBtns.length > 0 && timelineItems.length > 0) {
       timelineFilterBtns.forEach((btn) => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
           timelineFilterBtns.forEach((b) => b.classList.remove('active'));
           btn.classList.add('active');
 
-          const filter = btn.getAttribute('data-timeline-filter') || 'all';
+          const filter = (btn.getAttribute('data-timeline-filter') || 'all').toLowerCase();
 
           timelineItems.forEach((item) => {
             if (filter === 'all') {
               item.classList.remove('is-hidden');
             } else {
-              const category = item.getAttribute('data-category') || '';
+              const category = (item.getAttribute('data-category') || '').toLowerCase();
               if (category === filter) {
                 item.classList.remove('is-hidden');
               } else {
@@ -114,7 +116,7 @@
     }
 
     // Interactive Cross-Linked Skill Matrix
-    const skillPills = document.querySelectorAll('.interactive-skill-pill, .skill-tag-clickable');
+    const skillPills = document.querySelectorAll('.interactive-skill-pill, .skill-tag-clickable, [data-skill]');
     const skillAwareElements = document.querySelectorAll('[data-skills]');
     const skillBanner = document.getElementById('skill-filter-banner');
     const skillBannerText = document.getElementById('skill-banner-text');
@@ -132,7 +134,7 @@
     function applySkillFilter(skillName) {
       if (!skillName) return clearSkillFilter();
 
-      const normalized = skillName.trim().toLowerCase();
+      const normalized = skillName.trim().toLowerCase().replace(/[^a-z0-9]/g, '');
 
       if (activeSkill === normalized) {
         return clearSkillFilter();
@@ -141,8 +143,9 @@
       activeSkill = normalized;
 
       skillPills.forEach((p) => {
-        const pillSkill = (p.getAttribute('data-skill') || p.textContent).trim().toLowerCase();
-        if (pillSkill === normalized) {
+        const raw = p.getAttribute('data-skill') || p.textContent;
+        const pillNormalized = raw.trim().toLowerCase().replace(/[^a-z0-9]/g, '');
+        if (pillNormalized === normalized) {
           p.classList.add('is-active');
         } else {
           p.classList.remove('is-active');
@@ -150,19 +153,27 @@
       });
 
       let matchCount = 0;
+      let firstMatchEl = null;
+
       skillAwareElements.forEach((el) => {
-        const itemSkills = (el.getAttribute('data-skills') || '').toLowerCase().split(/[\s,]+/);
-        if (itemSkills.includes(normalized)) {
+        const rawSkills = el.getAttribute('data-skills') || '';
+        const itemSkills = rawSkills.toLowerCase().split(/[\s,]+/).map((s) => s.replace(/[^a-z0-9]/g, ''));
+        if (itemSkills.some((s) => s && (s === normalized || s.includes(normalized) || normalized.includes(s)))) {
           el.classList.add('highlight-match');
           matchCount++;
+          if (!firstMatchEl) firstMatchEl = el;
         } else {
           el.classList.remove('highlight-match');
         }
       });
 
       if (skillBanner && skillBannerText) {
-        skillBannerText.innerHTML = `Showing <strong>${matchCount}</strong> career, project & research entries featuring <strong>${skillName}</strong>`;
+        skillBannerText.innerHTML = `Showing <strong>${matchCount}</strong> career milestones &amp; deliverables matching <strong>${skillName}</strong>`;
         skillBanner.classList.add('show');
+      }
+
+      if (firstMatchEl) {
+        firstMatchEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
     }
 
