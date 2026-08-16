@@ -156,86 +156,305 @@
         </p>
       </section>
 
-      <section class="card">
-        <h2 class="section-title">Experience</h2>
-        <div class="entry">
-          <h3>BMW: Cloud DevOps Engineer (Working Student)</h3>
-          <p class="dates">Jun 2025 – Sep 2026</p>
-          <ul>
-            <li>Maintain AWS infrastructure as code across production services using Terraform and AWS CDK, with staged environments and controlled rollout steps.</li>
-            <li>Build and support batch data pipelines with EMR/Spark, AWS Glue, Python, and Scala for enterprise-scale mobility data workloads.</li>
-            <li>Configure IAM roles and policies, contribute to security hardening across KMS, Secrets Manager, and VPC, and support incident and root-cause analysis.</li>
-          </ul>
+      <!-- Interactive Cross-Linked Skill Matrix -->
+      <section class="card" id="skills-section">
+        <h2 class="section-title">Interactive Skill Matrix</h2>
+        <p class="text-muted" style="margin-bottom: 1rem; font-size: 0.92rem;">
+          Click any skill to highlight related career milestones, architecture projects, and research artifacts across the site.
+        </p>
+
+        <div id="skill-filter-banner" class="skill-filter-banner">
+          <span id="skill-banner-text">Showing entries for selected skill</span>
+          <button id="clear-skill-filter" class="clear-skill-btn">Clear Filter &times;</button>
         </div>
-        <div class="entry">
-          <h3>Ocumeda: Data Engineer and Analytics (Working Student)</h3>
-          <p class="dates">Jun 2024 – Jun 2025</p>
-          <ul>
-            <li>Designed and implemented scalable AWS-based data architecture using S3, Lambda, Redshift, and Step Functions.</li>
-            <li>Delivered around 10 ETL pipelines using Python and built governance and data-quality practices for a fast-growing startup.</li>
-          </ul>
+
+        <div class="skill-matrix-grid">
+          <div class="skill-group-card">
+            <h3 class="skill-group-title">☁️ Cloud &amp; DevOps</h3>
+            <div>
+              <button class="interactive-skill-pill" data-skill="aws">AWS</button>
+              <button class="interactive-skill-pill" data-skill="gcp">GCP</button>
+              <button class="interactive-skill-pill" data-skill="terraform">Terraform</button>
+              <button class="interactive-skill-pill" data-skill="docker">Docker</button>
+              <button class="interactive-skill-pill" data-skill="github-actions">GitHub Actions</button>
+              <button class="interactive-skill-pill" data-skill="iam">IAM &amp; Security</button>
+              <button class="interactive-skill-pill" data-skill="linux">Linux</button>
+            </div>
+          </div>
+
+          <div class="skill-group-card">
+            <h3 class="skill-group-title">📊 Data Engineering</h3>
+            <div>
+              <button class="interactive-skill-pill" data-skill="kafka">Apache Kafka</button>
+              <button class="interactive-skill-pill" data-skill="spark">Apache Spark</button>
+              <button class="interactive-skill-pill" data-skill="beam">Apache Beam</button>
+              <button class="interactive-skill-pill" data-skill="airflow">Airflow</button>
+              <button class="interactive-skill-pill" data-skill="postgresql">PostgreSQL</button>
+              <button class="interactive-skill-pill" data-skill="mongodb">MongoDB</button>
+              <button class="interactive-skill-pill" data-skill="glue">AWS Glue</button>
+              <button class="interactive-skill-pill" data-skill="athena">Athena</button>
+            </div>
+          </div>
+
+          <div class="skill-group-card">
+            <h3 class="skill-group-title">🧠 AI &amp; Software</h3>
+            <div>
+              <button class="interactive-skill-pill" data-skill="python">Python</button>
+              <button class="interactive-skill-pill" data-skill="pytorch">PyTorch</button>
+              <button class="interactive-skill-pill" data-skill="langchain">LangChain</button>
+              <button class="interactive-skill-pill" data-skill="weaviate">Weaviate</button>
+              <button class="interactive-skill-pill" data-skill="kg">Knowledge Graphs</button>
+              <button class="interactive-skill-pill" data-skill="fastapi">FastAPI</button>
+              <button class="interactive-skill-pill" data-skill="react">React</button>
+              <button class="interactive-skill-pill" data-skill="typescript">TypeScript</button>
+              <button class="interactive-skill-pill" data-skill="supabase">Supabase</button>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="card">
-        <h2 class="section-title">Selected Projects</h2>
-        <div class="entry">
+      <!-- Interactive Career & Academic Timeline -->
+      <section class="card" id="timeline-section">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+          <h2 class="section-title" style="margin-bottom: 0;">Career &amp; Research Timeline</h2>
+        </div>
+
+        <div class="timeline-filter-bar">
+          <button class="filter-btn timeline-filter-btn active" data-timeline-filter="all">All Tracks</button>
+          <button class="filter-btn timeline-filter-btn" data-timeline-filter="enterprise">Enterprise</button>
+          <button class="filter-btn timeline-filter-btn" data-timeline-filter="startups">Startups</button>
+          <button class="filter-btn timeline-filter-btn" data-timeline-filter="academia">Academia &amp; Research</button>
+        </div>
+
+        <div class="timeline-track">
+          <!-- BMW -->
+          <div class="timeline-item" data-category="enterprise" data-skills="aws terraform spark python glue iam linux github-actions athena">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <span class="timeline-role">BMW Group &bull; Cloud DevOps Engineer</span>
+                <span class="dates">Oct 2024 – Present (Munich)</span>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-badge-tag badge-enterprise">Enterprise</span>
+              </div>
+              <p style="margin: 0 0 0.5rem; font-size: 0.92rem;">
+                Maintain AWS infrastructure-as-code with Terraform and AWS CDK across production mobility services; orchestrate batch data pipelines with EMR/Spark, AWS Glue, and Python; configure IAM and KMS security hardening.
+              </p>
+              <div class="timeline-skills">
+                <span class="tag">AWS</span><span class="tag">Terraform</span><span class="tag">Spark</span><span class="tag">Glue</span><span class="tag">Python</span><span class="tag">IAM</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Salsuki -->
+          <div class="timeline-item" data-category="startups" data-skills="react typescript supabase postgresql github-actions python docker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <span class="timeline-role">Salsuki &bull; Solo Full-Stack Engineer</span>
+                <span class="dates">2024 – Present (Munich)</span>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-badge-tag badge-startup">Startup / Community</span>
+              </div>
+              <p style="margin: 0 0 0.5rem; font-size: 0.92rem;">
+                Built and maintain a full-stack platform for a non-profit salsa community (React 19, TypeScript, Supabase, Postgres RLS, Deno Edge Functions). Orchestrated using an AI-agent-driven solo development workflow.
+              </p>
+              <div class="timeline-skills">
+                <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Supabase</span><span class="tag">PostgreSQL</span><span class="tag">GitHub Actions</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ocumeda -->
+          <div class="timeline-item" data-category="startups" data-skills="aws python postgresql athena airflow linux">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <span class="timeline-role">Ocumeda GmbH &bull; Data Engineer</span>
+                <span class="dates">May 2024 – Sep 2024 (Munich)</span>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-badge-tag badge-startup">HealthTech Startup</span>
+              </div>
+              <p style="margin: 0 0 0.5rem; font-size: 0.92rem;">
+                Designed scalable AWS serverless data architecture (S3, Lambda, Redshift, Step Functions); developed ~10 ETL pipelines with Python connecting clinical APIs with up to 400% execution speedups.
+              </p>
+              <div class="timeline-skills">
+                <span class="tag">AWS</span><span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">ETL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Master's Thesis & Research -->
+          <div class="timeline-item" data-category="academia" data-skills="python kg pytorch langchain weaviate linux">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <span class="timeline-role">TUM Robotics &amp; AI Chair &bull; M.Sc. Thesis Researcher</span>
+                <span class="dates">2024 – Present (Munich)</span>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-badge-tag badge-academia">Academic Research</span>
+              </div>
+              <p style="margin: 0 0 0.5rem; font-size: 0.92rem;">
+                Knowledge Graph Construction &amp; Retrieval for LLM-Based Test Scenario Generation from UN Regulation 152. Benchmarking RegulaRAG, LightRAG, and HippoRAG 2.
+              </p>
+              <div class="timeline-skills">
+                <span class="tag">Knowledge Graphs</span><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">LangChain</span><span class="tag">Weaviate</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Delta Smith -->
+          <div class="timeline-item" data-category="startups" data-skills="gcp docker terraform airflow postgresql mongodb python linux">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <span class="timeline-role">Delta Smith &bull; Data Engineer &amp; Architect (Freelance)</span>
+                <span class="dates">Sep 2021 – Sep 2023 (Mexico City)</span>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-badge-tag badge-startup">Freelance Consulting</span>
+              </div>
+              <p style="margin: 0 0 0.5rem; font-size: 0.92rem;">
+                Architected batch data pipelines and observability infrastructure with Google Cloud Composer (Airflow), BigQuery, Docker, and Terraform for commercial clients.
+              </p>
+              <div class="timeline-skills">
+                <span class="tag">GCP</span><span class="tag">Terraform</span><span class="tag">Airflow</span><span class="tag">Docker</span><span class="tag">PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ITESM -->
+          <div class="timeline-item" data-category="academia" data-skills="python fastapi docker github-actions terraform iam linux">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <span class="timeline-role">ITESM &bull; University Lecturer (MLOps &amp; Data Engineering)</span>
+                <span class="dates">Feb 2022 – Jun 2023 (Mexico City)</span>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-badge-tag badge-academia">University Academia</span>
+              </div>
+              <p style="margin: 0 0 0.5rem; font-size: 0.92rem;">
+                Taught courses in the Master's in Applied AI and MLOps certification: Python OOP, Pytest, FastAPI, Docker, Terraform, GitHub Actions, and Observability.
+              </p>
+              <div class="timeline-skills">
+                <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Docker</span><span class="tag">Terraform</span><span class="tag">GitHub Actions</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wizeline -->
+          <div class="timeline-item" data-category="enterprise" data-skills="gcp aws kafka spark fastapi docker python pytest terraform">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <span class="timeline-role">Wizeline &bull; Data Engineer</span>
+                <span class="dates">Jan 2022 – Apr 2023 (Mexico City)</span>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-badge-tag badge-enterprise">Enterprise Clients</span>
+              </div>
+              <p style="margin: 0 0 0.5rem; font-size: 0.92rem;">
+                Developed streaming and batch ETL pipelines across GCP and AWS for enterprise clients (NBCUniversal, Dow Jones); built FastAPI ML model microservices on Docker and AWS EC2; taught Terraform and Kafka.
+              </p>
+              <div class="timeline-skills">
+                <span class="tag">GCP</span><span class="tag">AWS</span><span class="tag">Kafka</span><span class="tag">Spark</span><span class="tag">FastAPI</span><span class="tag">Terraform</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- iVoy -->
+          <div class="timeline-item" data-category="startups" data-skills="beam kafka spark airflow aws gcp postgresql mongodb glue athena">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <span class="timeline-role">iVoy &bull; Data Engineer</span>
+                <span class="dates">Feb 2021 – Jan 2022 (Mexico City)</span>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-badge-tag badge-startup">Logistics Startup</span>
+              </div>
+              <p style="margin: 0 0 0.5rem; font-size: 0.92rem;">
+                Consolidated MySQL, Postgres, and MongoDB streams into a Kafka cluster (500M+ records); built streaming pipelines with Apache Beam on Dataflow and an AWS S3 data lake with Glue and Athena.
+              </p>
+              <div class="timeline-skills">
+                <span class="tag">Apache Beam</span><span class="tag">Kafka</span><span class="tag">Spark</span><span class="tag">Airflow</span><span class="tag">PostgreSQL</span><span class="tag">AWS Glue</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Uber -->
+          <div class="timeline-item" data-category="enterprise" data-skills="python pytorch postgresql linux">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <span class="timeline-role">Uber Technologies Inc &bull; Operations &amp; Automation Intern</span>
+                <span class="dates">Oct 2019 – Jan 2021 (Mexico City)</span>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-badge-tag badge-enterprise">Enterprise</span>
+              </div>
+              <p style="margin: 0 0 0.5rem; font-size: 0.92rem;">
+                Productized a Python GUI automation app saving 40+ hours/month; built document classification prototypes using Deep Learning (ResNet-50) and OCR.
+              </p>
+              <div class="timeline-skills">
+                <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">SQL</span><span class="tag">OCR</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Selected Projects -->
+      <section class="card" id="projects-section">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="entry" data-skills="react typescript supabase postgresql github-actions">
           <h3>Salsuki: Community Management Platform</h3>
           <p class="dates">2024 – Current</p>
-          <ul>
-            <li>Built and maintained a full-stack platform for a non-profit salsa school with bookings, wallet balances, waitlists, and resource management.</li>
-            <li>Delivered the frontend with React, TypeScript, Vite, and Tailwind CSS, and the backend with Supabase, Edge Functions, Auth, and Storage.</li>
-            <li>Added a credit-based internal economy, event booking workflows, and interactive learning-resource features. Website: <a href="https://salsuki-website.vercel.app/" target="_blank" rel="noreferrer">salsuki-website.vercel.app</a></li>
-          </ul>
+          <p>
+            Full-stack platform built on Supabase (Postgres with RLS, Edge Functions, Auth, Storage) and React 19/TypeScript on Vercel with an append-only ledger economy and automated CI/CD.
+          </p>
+          <p><a href="/projects/salsuki/">Read the full architecture write-up &rarr;</a></p>
         </div>
-        <div class="entry">
-          <h3>LECture-bot: GenAI course assistant</h3>
+        <div class="entry" data-skills="python langchain weaviate docker">
+          <h3>LECture-bot: GenAI Course Assistant</h3>
           <p class="dates">Apr 2025 – Aug 2025</p>
-          <ul>
-            <li>Designed the RAG and generative AI subsystem for a course-material assistant, processing documents, storing vectors, and integrating with cloud and local LLMs. Repository: <a href="https://github.com/AET-DevOps25/team-LECture-bot" target="_blank" rel="noreferrer">team-LECture-bot</a></li>
-          </ul>
+          <p>
+            Generative AI and RAG subsystem built with LangChain, Weaviate vector storage, and local/cloud LLMs for course material intelligence.
+          </p>
+          <p><a href="/projects/lecture-bot/">Read the full project write-up &rarr;</a></p>
         </div>
       </section>
 
-      <section class="card">
-        <h2 class="section-title">Skills</h2>
-        <div class="two-column">
-          <div>
-            <h3>Cloud & Data</h3>
-            <div class="tag-list">
-              <span>AWS</span><span>Terraform</span><span>AWS CDK</span><span>EMR</span><span>Spark</span><span>Athena</span><span>Glue</span><span>Step Functions</span><span>QuickSight</span>
-            </div>
-          </div>
-          <div>
-            <h3>Development & MLOps</h3>
-            <div class="tag-list">
-              <span>Python</span><span>SQL</span><span>FastAPI</span><span>Pytest</span><span>Docker</span><span>GitHub Actions</span><span>Terraform</span><span>React</span><span>TypeScript</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="card">
+      <!-- Education & Master's Thesis -->
+      <section class="card" id="education-section">
         <h2 class="section-title">Education</h2>
-        <div class="entry">
+        <div class="entry" data-skills="python linux">
           <h3>Technical University of Munich</h3>
           <p class="dates">Oct 2023 – Expected Apr 2027</p>
-          <p>M.Sc. in Informatics with coursework in cloud computing, cloud-based data processing, DevOps, machine learning, and requirements engineering. The program has strengthened my focus on distributed systems, ML engineering, and reliable software delivery.</p>
+          <p>M.Sc. in Informatics focused on distributed cloud computing, machine learning, and reliable software systems.</p>
         </div>
-        <div class="entry">
-          <h3>Instituto Politécnico Nacional</h3>
+        <div class="entry" data-skills="linux">
+          <h3>Instituto Politécnico Nacional (UPIITA)</h3>
           <p class="dates">Jan 2015 – Jul 2020</p>
-          <p>B.Sc. in Computer System Engineering.</p>
+          <p>B.Sc. in Telematics Engineering.</p>
         </div>
       </section>
 
-      <section class="card">
+      <section class="card" id="thesis-section" data-skills="kg python pytorch langchain weaviate">
         <h2 class="section-title">Master's Thesis</h2>
         <div class="entry">
           <h3>KG Construction and Retrieval for LLM-Based Test Scenario Generation from Automotive Regulations</h3>
-          <p class="dates">Implementation underway</p>
+          <p class="dates">Implementation underway (Munich)</p>
           <p>TUM Chair of Robotics, AI and Real-Time Systems, advised by Prof. Alois Knoll and André Schamschurko.</p>
-          <p>Designing and evaluating a structured Knowledge Graph retrieval layer to improve LLM-based generation of test scenarios (speed / load condition / post-condition tuples) from automotive regulations (UN Regulation 152). Benchmarked against three systems: RegulaRAG, LightRAG, and HippoRAG 2, using precision, recall, F1, and success or failure rate metrics.</p>
+          <p>
+            Designing and evaluating a structured Knowledge Graph retrieval layer to improve LLM-based generation of test scenarios (speed / load condition / post-condition tuples) from automotive regulations (UN Regulation 152). Benchmarked against three systems: RegulaRAG, LightRAG, and HippoRAG 2, using precision, recall, F1, and success or failure rate metrics.
+          </p>
+          <p><a href="/projects/masters-thesis/">Read the research overview &rarr;</a></p>
         </div>
       </section>
     </main>

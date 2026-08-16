@@ -135,7 +135,7 @@
 
       <section class="card">
         <h2 class="section-title">Experience</h2>
-        <div class="entry">
+        <div class="entry" data-skills="aws terraform spark python glue iam linux github-actions athena">
           <h3>BMW: Cloud DevOps Engineer (Working Student)</h3>
           <p class="dates">Jun 2025 – Sep 2026</p>
           <ul>
@@ -147,7 +147,7 @@
             <li>Produce architecture documentation, implementation proposals, and technical handoffs; support incident/investigation work with root-cause analysis and evidence-based reporting.</li>
           </ul>
         </div>
-        <div class="entry">
+        <div class="entry" data-skills="aws python postgresql athena airflow linux">
           <h3>Ocumeda: Data Engineer and Analytics (Working Student)</h3>
           <p class="dates">Jun 2024 – Jun 2025</p>
           <ul>
@@ -158,7 +158,7 @@
             <li>Managed the data infrastructure that supported data-driven decision-making for over 15 users, including C-level executives.</li>
           </ul>
         </div>
-        <div class="entry">
+        <div class="entry" data-skills="python fastapi docker github-actions terraform iam linux">
           <h3>ITESM: Part-Time University Lecturer</h3>
           <p class="dates">Feb 2022 – Sep 2023</p>
           <ul>
@@ -167,7 +167,7 @@
             <li>Part-time lecturer in Python, OOP, unit/integration testing with Pytest, packaging with Python, API REST with FastAPI, Software Engineering, Monitoring, Observability, Docker, Docker Compose, Terraform, and GitHub Actions, applied to an MLOps certification course.</li>
           </ul>
         </div>
-        <div class="entry">
+        <div class="entry" data-skills="gcp aws kafka spark fastapi docker python pytest terraform">
           <h3>Wizeline: Data Engineer</h3>
           <p class="dates">Jan 2022 – Apr 2023</p>
           <ul>
@@ -178,7 +178,7 @@
             <li>Created a REST API for a machine-learning model using FastAPI, Python, Docker, and AWS EC2.</li>
           </ul>
         </div>
-        <div class="entry">
+        <div class="entry" data-skills="beam kafka spark airflow aws gcp postgresql mongodb glue athena">
           <h3>iVoy: Data Engineer</h3>
           <p class="dates">Feb 2021 – Jan 2022</p>
           <ul>
@@ -188,7 +188,7 @@
             <li>Created a Data Lake for raw data in AWS S3, consumed with Glue, Athena, and QuickSight.</li>
           </ul>
         </div>
-        <div class="entry">
+        <div class="entry" data-skills="python pytorch postgresql linux">
           <h3>Uber Technologies Inc: Driver and Rider Operations Intern</h3>
           <p class="dates">Oct 2019 – Jan 2021</p>
           <ul>
@@ -198,7 +198,7 @@
             <li>Developed a document processing automation prototype using Deep Learning (ResNet-50) and OCR (81% accuracy across four categories).</li>
           </ul>
         </div>
-        <div class="entry">
+        <div class="entry" data-skills="gcp docker terraform airflow postgresql mongodb python linux">
           <h3>Delta Smith: Data Engineering and Architect (Freelancing)</h3>
           <p class="dates">Sep 2021 – Sep 2023</p>
           <ul>
@@ -305,40 +305,59 @@
         </div>
       </section>
 
-      <section class="card">
-        <h2 class="section-title">Skills</h2>
-        <div class="two-column">
-          <div>
-            <h3>Cloud Platforms</h3>
-            <ul>
-              <li>AWS: S3, Lambda, Redshift, Step Functions, EMR, Athena, Glue, EC2, QuickSight, IAM, KMS, VPC, Secrets Manager, Systems Manager</li>
-              <li>GCP: BigQuery, Cloud Functions, Cloud Storage, Composer, Dataflow, Pub/Sub, Compute Engine</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Data Engineering</h3>
-            <ul>
-              <li>Languages: Python (Pandas, NumPy), SQL</li>
-              <li>Big Data: Spark (PySpark), Kafka, Apache Beam</li>
-              <li>Orchestration / ETL: Airflow, ETL/ELT Design, Airbyte, dbt</li>
-              <li>Concepts: Data Architecture, Data Modeling, Data Governance, Data Quality, DataOps</li>
-            </ul>
-          </div>
+      <section class="card" id="skills-section">
+        <h2 class="section-title">Skills &amp; Technologies</h2>
+        <p class="text-muted" style="margin-bottom: 1rem; font-size: 0.92rem;">
+          Click any skill to highlight related experience entries, project deliverables, and research artifacts across the CV.
+        </p>
+
+        <div id="skill-filter-banner" class="skill-filter-banner">
+          <span id="skill-banner-text">Showing entries for selected skill</span>
+          <button id="clear-skill-filter" class="clear-skill-btn">Clear Filter &times;</button>
         </div>
-        <div class="entry">
-          <h3>MLOps & Development</h3>
-          <ul>
-            <li>Infrastructure & CI/CD: Docker, Terraform, AWS CDK, Git, GitHub Actions</li>
-            <li>Testing & APIs: Pytest, FastAPI, Django</li>
-            <li>Monitoring & Observability Practices</li>
-          </ul>
-        </div>
-        <div class="entry">
-          <h3>Machine Learning & AI</h3>
-          <ul>
-            <li>Libraries: Scikit-learn, TensorFlow, Keras, OpenCV</li>
-            <li>Domains: Deep Learning (CNN, ResNet), NLP, Computer Vision (Image Analysis, OCR, Segmentation), nnU-Net</li>
-          </ul>
+
+        <div class="skill-matrix-grid">
+          <div class="skill-group-card">
+            <h3 class="skill-group-title">☁️ Cloud &amp; DevOps</h3>
+            <div>
+              <button class="interactive-skill-pill" data-skill="aws">AWS</button>
+              <button class="interactive-skill-pill" data-skill="gcp">GCP</button>
+              <button class="interactive-skill-pill" data-skill="terraform">Terraform</button>
+              <button class="interactive-skill-pill" data-skill="docker">Docker</button>
+              <button class="interactive-skill-pill" data-skill="github-actions">GitHub Actions</button>
+              <button class="interactive-skill-pill" data-skill="iam">IAM &amp; Security</button>
+              <button class="interactive-skill-pill" data-skill="linux">Linux</button>
+            </div>
+          </div>
+
+          <div class="skill-group-card">
+            <h3 class="skill-group-title">📊 Data Engineering</h3>
+            <div>
+              <button class="interactive-skill-pill" data-skill="kafka">Apache Kafka</button>
+              <button class="interactive-skill-pill" data-skill="spark">Apache Spark</button>
+              <button class="interactive-skill-pill" data-skill="beam">Apache Beam</button>
+              <button class="interactive-skill-pill" data-skill="airflow">Airflow</button>
+              <button class="interactive-skill-pill" data-skill="postgresql">PostgreSQL</button>
+              <button class="interactive-skill-pill" data-skill="mongodb">MongoDB</button>
+              <button class="interactive-skill-pill" data-skill="glue">AWS Glue</button>
+              <button class="interactive-skill-pill" data-skill="athena">Athena</button>
+            </div>
+          </div>
+
+          <div class="skill-group-card">
+            <h3 class="skill-group-title">🧠 AI &amp; Software</h3>
+            <div>
+              <button class="interactive-skill-pill" data-skill="python">Python</button>
+              <button class="interactive-skill-pill" data-skill="pytorch">PyTorch</button>
+              <button class="interactive-skill-pill" data-skill="langchain">LangChain</button>
+              <button class="interactive-skill-pill" data-skill="weaviate">Weaviate</button>
+              <button class="interactive-skill-pill" data-skill="kg">Knowledge Graphs</button>
+              <button class="interactive-skill-pill" data-skill="fastapi">FastAPI</button>
+              <button class="interactive-skill-pill" data-skill="react">React</button>
+              <button class="interactive-skill-pill" data-skill="typescript">TypeScript</button>
+              <button class="interactive-skill-pill" data-skill="supabase">Supabase</button>
+            </div>
+          </div>
         </div>
       </section>
 
