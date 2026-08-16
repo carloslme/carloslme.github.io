@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Carlos Lopez Mejia | Projects &amp; Technical Feed</title>
+    <link>https://carloslme.com/projects/</link>
+    <description>Technical write-ups, cloud architecture designs, and AI research by Carlos Lopez Mejia.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 16 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <atom:link href="https://carloslme.com/feed.xml" rel="self" type="application/rss+xml" />
+
+    <item>
+      <title>Master's Thesis: KG Construction and Retrieval for LLM-Based Test Scenario Generation from Automotive Regulations</title>
+      <link>https://carloslme.com/projects/masters-thesis/</link>
+      <guid isPermaLink="true">https://carloslme.com/projects/masters-thesis/</guid>
+      <pubDate>Sun, 16 Aug 2026 12:00:00 GMT</pubDate>
+      <category>AI &amp; LLMs</category>
+      <category>Research</category>
+      <description><![CDATA[Designing and evaluating a structured Knowledge Graph retrieval layer to improve LLM-based generation of test scenarios (speed, load condition, and post-condition tuples) from automotive regulations (UN Regulation 152). Benchmarked against RegulaRAG, LightRAG, and HippoRAG 2.]]></description>
+    </item>
+
+    <item>
+      <title>Salsuki: Architecture &amp; Engineering Design for a Community Platform</title>
+      <link>https://carloslme.com/projects/salsuki/</link>
+      <guid isPermaLink="true">https://carloslme.com/projects/salsuki/</guid>
+      <pubDate>Tue, 11 Aug 2026 10:00:00 GMT</pubDate>
+      <category>Cloud &amp; DevOps</category>
+      <category>Data Engineering</category>
+      <description><![CDATA[Full-stack community management platform built with Supabase (Postgres, Row-Level Security, Edge Functions), React 19/TypeScript on Vercel, and automated CI/CD. Includes append-only financial ledger with SUM() balance calculations and atomic [redacted] RPCs.]]></description>
+    </item>
+
+    <item>
+      <title>LECture-bot: GenAI Course Assistant with LangChain &amp; Weaviate</title>
+      <link>https://carloslme.com/projects/lecture-bot/</link>
+      <guid isPermaLink="true">https://carloslme.com/projects/lecture-bot/</guid>
+      <pubDate>Fri, 01 Aug 2026 09:00:00 GMT</pubDate>
+      <category>AI &amp; LLMs</category>
+      <description><![CDATA[Generative AI assistant for course materials built using LangChain, Weaviate vector search, and dual cloud/local LLM backends (OpenAI and Gemini API) with conversational memory and source citation.]]></description>
+    </item>
+
+    <item>
+      <title>AI Travel Journal Assistant: Full-Stack React, FastAPI &amp; PostgreSQL</title>
+      <link>https://carloslme.com/projects/travel-journal/</link>
+      <guid isPermaLink="true">https://carloslme.com/projects/travel-journal/</guid>
+      <pubDate>Wed, 15 Jul 2026 14:00:00 GMT</pubDate>
+      <category>Cloud &amp; DevOps</category>
+      <category>AI &amp; LLMs</category>
+      <description><![CDATA[Full-stack intelligent travel companion built with React, FastAPI, PostgreSQL, and Docker. Implements automated itinerary generation and contextual destination recommendations.]]></description>
+    </item>
+
+    <item>
+      <title>TUM IDP: LLM Tooling Framework for Research Integration</title>
+      <link>https://carloslme.com/projects/tum-idp/</link>
+      <guid isPermaLink="true">https://carloslme.com/projects/tum-idp/</guid>
+      <pubDate>Mon, 01 Jun 2026 11:00:00 GMT</pubDate>
+      <category>AI &amp; LLMs</category>
+      <category>Research</category>
+      <description><![CDATA[Framework designed at Technical University of Munich to bridge academic research-stage tools into production-ready software using LLMs and structured Python toolchains.]]></description>
+    </item>
+
+    <item>
+      <title>ADLM Medical Image Segmentation with nnU-Net &amp; PyTorch</title>
+      <link>https://carloslme.com/projects/adlm-segmentation/</link>
+      <guid isPermaLink="true">https://carloslme.com/projects/adlm-segmentation/</guid>
+      <pubDate>Fri, 15 May 2026 16:00:00 GMT</pubDate>
+      <category>Research</category>
+      <category>AI &amp; LLMs</category>
+      <description><![CDATA[Deep learning research at TUM Chair for AI in Medicine benchmarking 3D medical image segmentation models using PyTorch, nnU-Net, and MONAI.]]></description>
+    </item>
+  </channel>
+</rss>

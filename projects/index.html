@@ -28,6 +28,7 @@
     <meta name="twitter:title" content="Projects & Technical Write-Ups | Carlos Lopez Mejia" />
     <meta name="twitter:description" content="Technical projects, system architecture write-ups, and applied research by Carlos Lopez Mejia." />
 
+    <link rel="alternate" type="application/rss+xml" title="Carlos Lopez Mejia | Projects & Technical Feed" href="https://carloslme.com/feed.xml" />
     <link rel="stylesheet" href="/assets/css/cv.css" />
     <script src="/assets/js/main.js" defer></script>
   </head>
@@ -46,13 +47,25 @@
     </header>
 
     <main class="container" style="padding: 2rem 0 3rem;">
-      <div style="margin-bottom: 2rem;">
-        <h1 style="margin-bottom: 0.25rem;">Projects</h1>
-        <p class="meta" style="margin-top: 0; font-size: 1.05rem;">A selection of technical projects and write-ups. Listed newest first.</p>
+      <div style="margin-bottom: 1rem;">
+        <h1 style="margin-bottom: 0.25rem;">Projects &amp; Technical Write-Ups</h1>
+        <p class="meta" style="margin-top: 0; font-size: 1.05rem;">A selection of technical projects, architecture deep dives, and applied research.</p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="ai-llm">AI &amp; LLMs</button>
+        <button class="filter-btn" data-filter="cloud-devops">Cloud &amp; DevOps</button>
+        <button class="filter-btn" data-filter="data-engineering">Data Engineering</button>
+        <button class="filter-btn" data-filter="research">Applied Research</button>
+        <a href="/feed.xml" class="rss-btn" title="Subscribe to RSS Feed" target="_blank" rel="noreferrer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: -1px;"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg> RSS Feed
+        </a>
       </div>
 
       <!-- Card: Master's Thesis -->
-      <article class="card" style="border-left: 4px solid var(--accent);">
+      <article class="card project-card" data-tags="ai-llm research" style="border-left: 4px solid var(--accent);">
         <p class="eyebrow">Special Feature &bull; Master's Thesis</p>
         <h2 style="margin-bottom: 0.3rem;"><a href="/projects/masters-thesis/">KG Construction and Retrieval for LLM-Based Test Scenario Generation from Automotive Regulations</a></h2>
         <p class="meta" style="font-weight: 600; margin-bottom: 0.75rem;">Implementation underway &bull; TUM Chair of Robotics, AI and Real-Time Systems</p>
@@ -63,7 +76,7 @@
       </article>
 
       <!-- Card: Salsuki -->
-      <article class="card">
+      <article class="card project-card" data-tags="cloud-devops data-engineering">
         <h2 style="margin-bottom: 0.3rem;"><a href="/projects/salsuki/">Salsuki: Community Management Platform</a></h2>
         <p class="meta" style="font-weight: 600; margin-bottom: 0.75rem;">2024 – Current &bull; Full-Stack, Solo Engineer</p>
         <p>
@@ -73,7 +86,7 @@
       </article>
 
       <!-- Card: LECture-bot -->
-      <article class="card">
+      <article class="card project-card" data-tags="ai-llm">
         <h2 style="margin-bottom: 0.3rem;"><a href="/projects/lecture-bot/">LECture-bot: GenAI Course Assistant</a></h2>
         <p class="meta" style="font-weight: 600; margin-bottom: 0.75rem;">Apr 2025 – Aug 2025 &bull; TUM DevOps Course</p>
         <p>
@@ -86,7 +99,7 @@
       </article>
 
       <!-- Card: AI Travel Journal Assistant -->
-      <article class="card">
+      <article class="card project-card" data-tags="cloud-devops ai-llm">
         <h2 style="margin-bottom: 0.3rem;"><a href="/projects/travel-journal/">AI Travel Journal Assistant</a></h2>
         <p class="meta" style="font-weight: 600; margin-bottom: 0.75rem;">Apr 2025 – Aug 2025 &bull; TUM Connected Mobility Lab</p>
         <p>
@@ -99,7 +112,7 @@
       </article>
 
       <!-- Card: TUM IDP -->
-      <article class="card">
+      <article class="card project-card" data-tags="ai-llm research">
         <h2 style="margin-bottom: 0.3rem;"><a href="/projects/tum-idp/">TUM IDP: LLM Tooling Framework</a></h2>
         <p class="meta" style="font-weight: 600; margin-bottom: 0.75rem;">Oct 2024 – May 2025 &bull; TUM Interdisciplinary Project</p>
         <p>
@@ -112,7 +125,7 @@
       </article>
 
       <!-- Card: ADLM Medical Image Segmentation -->
-      <article class="card">
+      <article class="card project-card" data-tags="research ai-llm">
         <h2 style="margin-bottom: 0.3rem;"><a href="/projects/adlm-segmentation/">ADLM Medical Image Segmentation</a></h2>
         <p class="meta" style="font-weight: 600; margin-bottom: 0.75rem;">Apr 2024 – Aug 2024 &bull; TUM Chair for AI in Medicine</p>
         <p>

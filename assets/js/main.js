@@ -56,5 +56,33 @@
         }
       });
     });
+
+    // Project Tag Filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    if (filterBtns.length > 0 && projectCards.length > 0) {
+      filterBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach((b) => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filter = btn.getAttribute('data-filter') || 'all';
+
+          projectCards.forEach((card) => {
+            if (filter === 'all') {
+              card.classList.remove('is-hidden');
+            } else {
+              const tags = (card.getAttribute('data-tags') || '').split(' ');
+              if (tags.includes(filter)) {
+                card.classList.remove('is-hidden');
+              } else {
+                card.classList.add('is-hidden');
+              }
+            }
+          });
+        });
+      });
+    }
   });
 })();
