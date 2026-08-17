@@ -16,7 +16,7 @@ assignees: 'carloslme'
 ## 2. Context & Motivation (Why)
 - **Background:** [Why is this change needed? What problem does it solve?]
 - **Recruiter / User Impact:** [How does this elevate the portfolio narrative, readability, or credibility?]
-- **Reference / Inspiration:** [Links to benchmarks like fmind.dev, CV master, or issue discussions]
+- **Reference / Inspiration:** [Links to benchmarks like engineering portfolios, CV master, or issue discussions]
 
 ---
 
