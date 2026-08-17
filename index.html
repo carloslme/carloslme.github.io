@@ -542,24 +542,91 @@
         </div>
       </section>
 
-      <!-- Selected Projects -->
+      <!-- Featured Engineering Deep Dives & Projects -->
       <section class="card" id="projects-section">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="entry" data-skills="react typescript supabase postgresql github-actions">
-          <h3>Salsuki: Community Management Platform</h3>
-          <p class="dates">2024 – Current</p>
-          <p>
-            Full-stack platform built on Supabase (Postgres with RLS, Edge Functions, Auth, Storage) and React 19/TypeScript on Vercel with an append-only ledger economy and automated CI/CD.
-          </p>
-          <p><a href="/projects/salsuki/">Read the full architecture write-up &rarr;</a></p>
+        <h2 class="section-title">Featured Projects &amp; Field Notes</h2>
+        <p class="text-muted" style="margin-bottom: 1.25rem; font-size: 0.92rem;">
+          In-depth technical write-ups, architectural trade-off evaluations, and applied research deliverables.
+        </p>
+
+        <div class="deep-dives-grid">
+          <!-- 1. Salsuki Architecture -->
+          <a class="deep-dive-card" href="/projects/salsuki/" data-skills="react typescript supabase postgresql github-actions docker">
+            <div>
+              <div class="deep-dive-meta">
+                <span class="deep-dive-topic">System Design</span>
+                <span class="deep-dive-readtime">6 min read</span>
+              </div>
+              <h3 class="deep-dive-title">Salsuki: Append-Only Ledger &amp; Postgres RLS Engine</h3>
+              <p class="deep-dive-desc">
+                Architecting a zero-loss credit economy (`SUM()` ledger at read time), atomic SQL `[redacted]` RPCs, and local Supabase CI testing in GitHub Actions.
+              </p>
+              <div class="tag-list" style="margin-bottom: 0.5rem;">
+                <span class="tag">Supabase</span>
+                <span class="tag">Postgres RLS</span>
+                <span class="tag">React 19</span>
+                <span class="tag">TypeScript</span>
+              </div>
+            </div>
+            <div class="deep-dive-footer">
+              <span class="deep-dive-link-text">Read case study &rarr;</span>
+              <span class="dates" style="font-size: 0.76rem;">2024 – Present</span>
+            </div>
+          </a>
+
+          <!-- 2. Master's Thesis Research -->
+          <a class="deep-dive-card" href="/projects/masters-thesis/" data-skills="kg python pytorch langchain weaviate linux">
+            <div>
+              <div class="deep-dive-meta">
+                <span class="deep-dive-topic">Applied AI &amp; KGs</span>
+                <span class="deep-dive-readtime">8 min read</span>
+              </div>
+              <h3 class="deep-dive-title">KG Retrieval for Automotive Test Scenario Generation</h3>
+              <p class="deep-dive-desc">
+                Designing structured Knowledge Graph retrieval layers evaluated against RegulaRAG, LightRAG, and HippoRAG 2 for regulatory test scenario extraction from UN Reg 152.
+              </p>
+              <div class="tag-list" style="margin-bottom: 0.5rem;">
+                <span class="tag">TUM Munich</span>
+                <span class="tag">UN Reg 152</span>
+                <span class="tag">Graph RAG</span>
+                <span class="tag">PyTorch</span>
+              </div>
+            </div>
+            <div class="deep-dive-footer">
+              <span class="deep-dive-link-text">Read research &rarr;</span>
+              <span class="dates" style="font-size: 0.76rem;">TUM Chair of AI</span>
+            </div>
+          </a>
+
+          <!-- 3. LECture-bot GenAI Assistant -->
+          <a class="deep-dive-card" href="/projects/lecture-bot/" data-skills="python langchain weaviate docker fastapi">
+            <div>
+              <div class="deep-dive-meta">
+                <span class="deep-dive-topic">GenAI &amp; RAG</span>
+                <span class="deep-dive-readtime">5 min read</span>
+              </div>
+              <h3 class="deep-dive-title">LECture-bot: Academic RAG with LangChain &amp; Weaviate</h3>
+              <p class="deep-dive-desc">
+                Building multi-modal lecture indexing and hybrid vector similarity retrieval to ground LLM student responses accurately on university course materials.
+              </p>
+              <div class="tag-list" style="margin-bottom: 0.5rem;">
+                <span class="tag">LangChain</span>
+                <span class="tag">Weaviate</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">Docker</span>
+              </div>
+            </div>
+            <div class="deep-dive-footer">
+              <span class="deep-dive-link-text">Read write-up &rarr;</span>
+              <span class="dates" style="font-size: 0.76rem;">Apr – Aug 2025</span>
+            </div>
+          </a>
         </div>
-        <div class="entry" data-skills="python langchain weaviate docker">
-          <h3>LECture-bot: GenAI Course Assistant</h3>
-          <p class="dates">Apr 2025 – Aug 2025</p>
-          <p>
-            Generative AI and RAG subsystem built with LangChain, Weaviate vector storage, and local/cloud LLMs for course material intelligence.
-          </p>
-          <p><a href="/projects/lecture-bot/">Read the full project write-up &rarr;</a></p>
+
+        <div style="margin-top: 1.5rem; text-align: center;">
+          <a href="/projects/" class="button secondary" style="font-size: 0.88rem; padding: 0.55rem 1.1rem;">
+            Explore All 7 Technical Projects &amp; Case Studies &rarr;
+          </a>
         </div>
       </section>
 
