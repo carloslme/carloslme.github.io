@@ -191,5 +191,60 @@
         clearSkillFilter();
       });
     }
+
+    // Sticky Sub-Navigation Scroll Spy & Smooth Scrolling
+    const subnavLinks = document.querySelectorAll('.subnav-link');
+    const trackedSections = Array.from(subnavLinks).map((link) => {
+      const id = link.getAttribute('href');
+      return id && id.startsWith('#') ? document.querySelector(id) : null;
+    }).filter(Boolean);
+
+    if (subnavLinks.length > 0 && trackedSections.length > 0) {
+      subnavLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+          const targetId = link.getAttribute('href');
+          if (targetId && targetId.startsWith('#')) {
+            const targetEl = document.querySelector(targetId);
+            if (targetEl) {
+              e.preventDefault();
+              targetEl.scrollIntoView({ behavior: 'smooth' });
+              subnavLinks.forEach((l) => l.classList.remove('active'));
+              link.classList.add('active');
+            }
+          }
+        });
+      });
+
+      let scrollTimeout;
+      const updateActiveSubnav = () => {
+        const scrollPosition = window.scrollY + 130;
+        let currentSectionId = '';
+
+        trackedSections.forEach((sec) => {
+          if (sec.offsetTop <= scrollPosition) {
+            currentSectionId = sec.getAttribute('id');
+          }
+        });
+
+        if (currentSectionId) {
+          subnavLinks.forEach((link) => {
+            if (link.getAttribute('href') === `#${currentSectionId}`) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+        }
+      };
+
+      window.addEventListener('scroll', () => {
+        if (!scrollTimeout) {
+          scrollTimeout = requestAnimationFrame(() => {
+            updateActiveSubnav();
+            scrollTimeout = null;
+          });
+        }
+      }, { passive: true });
+    }
   });
 })();

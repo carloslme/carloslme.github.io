@@ -67,12 +67,79 @@ a:hover { text-decoration: underline; }
 .site-header {
   background: var(--header-bg);
   color: #fff;
-  padding: 1rem 0;
+  padding: 0.85rem 0;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 60;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   transition: background-color 0.25s ease;
+}
+
+/* Sticky Section Jump Sub-Navigation */
+.sticky-subnav {
+  position: sticky;
+  top: 54px;
+  z-index: 45;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 0.4rem 0;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.subnav-container {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0.15rem 0;
+}
+
+.subnav-container::-webkit-scrollbar {
+  display: none;
+}
+
+.subnav-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.32rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+  border: 1px solid transparent;
+}
+
+.subnav-link:hover {
+  color: var(--text);
+  background: var(--panel);
+  text-decoration: none;
+}
+
+.subnav-link.active {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+
+/* Scroll Margins for Section Anchors */
+section[id],
+.card[id],
+#hero-section,
+#about-section,
+#skills-section,
+#timeline-section,
+#projects-section,
+#education-section,
+#thesis-section {
+  scroll-margin-top: 115px;
 }
 
 .nav {
