@@ -827,6 +827,107 @@ h1 {
   }
 }
 
+/* Credentials, Degrees & Honors Grid */
+.credential-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.credential-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.35rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.credential-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.credential-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.credential-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.credential-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.credential-subtitle {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 0.15rem 0 0.4rem;
+}
+
+.credential-desc {
+  font-size: 0.86rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0.4rem 0 0.75rem;
+  flex-grow: 1;
+}
+
+.credential-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: auto;
+  padding-top: 0.6rem;
+  border-top: 1px dashed var(--border);
+}
+
+.honors-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.honor-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.75rem 0.9rem;
+  font-size: 0.85rem;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.honor-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: -0.1rem;
+}
+
+@media (max-width: 768px) {
+  .credential-grid,
+  .honors-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Skill Matrix Grid */
 .skill-matrix-grid {
   display: grid;
