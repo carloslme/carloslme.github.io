@@ -95,7 +95,7 @@ Apr 2024 – Aug 2024
 
 ## Skills
 
-- Cloud: AWS, GCP, Terraform, AWS CDK, EMR, Athena, Glue, Step Functions, QuickSight, IAM, KMS, VPC, Secrets Manager
+- Cloud: AWS, GCP, Microsoft Azure (Azure Functions, Blob Storage, Redis Cache, LUIS), Terraform, AWS CDK, EMR, Athena, Glue, Step Functions, QuickSight, IAM, KMS, VPC, Secrets Manager
 - Data: Python (Pandas, NumPy, PyTorch, Matplotlib), SQL, Spark (PySpark), Kafka, Apache Beam, Airflow, ETL/ELT, Airbyte, dbt
 - MLOps & DevOps: Docker, GitHub Actions, FastAPI, Pytest, Django
 - ML/AI: Scikit-learn, TensorFlow, Keras, OpenAI API, Gemini, OpenCV, NLP, Computer Vision, nnU-Net
