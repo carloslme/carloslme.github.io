@@ -59,17 +59,18 @@ Oct 2019 – Jan 2021
 
 ## Master's Thesis
 
-- **KG Construction and Retrieval for LLM-Based Test Scenario Generation from Automotive Regulations**, TUM Chair of Robotics, AI and Real-Time Systems, advised by Prof. Alois Knoll and André Schamschurko.
-- Implementation underway.
-- Designing and evaluating a structured Knowledge Graph retrieval layer to improve LLM-based generation of test scenarios (speed / load condition / post-condition tuples) from automotive regulations (UN Regulation 152). Benchmarked against three systems: RegulaRAG, LightRAG, and HippoRAG 2.
+- **Schema-Guided KG Construction and Retrieval for LLM-Based Automotive Test Scenario Generation**, TUM Chair of Robotics, AI and Real-Time Systems (Prof. Alois Knoll), advised by André Schamschurko.
+- Status: Registered, implementation underway.
+- Comparative evaluation of retrieval strategies (flat vector retrieval, LightRAG, HippoRAG 2) for generating test scenarios from UN Regulation No. 152 (advanced emergency braking systems), benchmarked against 59 annotated test scenarios using precision, recall, and F1-score.
+- Automated schema-guided knowledge graph construction classifying regulatory parameters (scenario type, speed, load condition, subsequent condition) and bounding retrieval to a single scenario family.
 - Full details & living log: [/projects/masters-thesis/](https://carloslme.com/projects/masters-thesis/)
 
 ## Projects
 
 ### Salsuki: Community Management Platform
 2024 – Current
-- Built a full-stack platform for a non-profit salsa school with bookings, wallet balances, waitlists, and learning resources.
-- Delivered the frontend with React, TypeScript, Vite, and Tailwind CSS, and the backend with Supabase, Edge Functions, Auth, and Storage.
+- Sole full-stack developer and product owner for a community management platform serving a non-profit salsa school with 60+ active users.
+- Delivered frontend with React 19, TypeScript, Vite, and backend with Supabase (Postgres with RLS, serverless Deno Edge Functions, Auth, Storage) and AI-agent-orchestrated solo development workflow.
 - Full write-up: [/projects/salsuki/](https://carloslme.com/projects/salsuki/)
 
 ### LECture-bot: GenAI Course Assistant
@@ -94,25 +95,31 @@ Apr 2024 – Aug 2024
 
 ## Skills
 
-- Cloud: AWS, GCP, Terraform, AWS CDK, EMR, Athena, Glue, Step Functions, QuickSight, IAM, KMS, VPC
-- Data: Python (Pandas, NumPy, PyTorch, Matplotlib), SQL, Spark (PySpark), Kafka, Airflow, ETL/ELT, Airbyte, dbt
+- Cloud: AWS, GCP, Terraform, AWS CDK, EMR, Athena, Glue, Step Functions, QuickSight, IAM, KMS, VPC, Secrets Manager
+- Data: Python (Pandas, NumPy, PyTorch, Matplotlib), SQL, Spark (PySpark), Kafka, Apache Beam, Airflow, ETL/ELT, Airbyte, dbt
 - MLOps & DevOps: Docker, GitHub Actions, FastAPI, Pytest, Django
 - ML/AI: Scikit-learn, TensorFlow, Keras, OpenAI API, Gemini, OpenCV, NLP, Computer Vision, nnU-Net
 
 ## Education
 
-- Technical University of Munich: M.Sc. in Informatics (Oct 2023 to Expected Apr 2027)
-- Instituto Politécnico Nacional: B.Sc. in Computer System Engineering (Jan 2015 to Jul 2020)
-- Universidad de Caldas: Student Exchange in Computer System Engineering (Jan 2019 to Jul 2019)
+- Technical University of Munich: Master of Science in Informatics (Oct 2023 to Expected Apr 2027, Munich, Germany)
+- Instituto Politécnico Nacional: Bachelor of Computer System Engineering (Jan 2015 to Jul 2020, Mexico City, Mexico)
+- Universidad de Caldas: Student Exchange in Computer System Engineering (Jan 2019 to Jul 2019, Manizales, Colombia)
+
+## Volunteering & Leadership
+
+- Salsuki: Founder & Salsa Instructor (Nov 2023 – Current, Munich, Germany)
+- LATUM: Latin American at TUM staff member (May 2024 – Current, Munich, Germany)
+- Buddy Program: IPN international student mentor (Jul 2018 – Jul 2021, Mexico City, Mexico)
 
 ## Languages
 
 - Spanish: Native
 - English: Fluent (IELTS Academic Score 6.5)
-- German: A2 (self-assessed)
+- German: A2 (self-assessed; TUM institutional coursework completed: A1.1, A1.2)
 
 ## Publications, Awards, and Courses
 
-- Publications: Late Blight Segmentation in Tomatoes Using Spatial Domain Methods and Colour Analysis
-- Awards: Second place, Social Data Challenge 4.0 by DataLab Mexico (2021)
-- Courses: Machine Learning in Production, MLOps Essentials, Deploying Scalable Machine Learning for Data Science, and more
+- Publications: Late Blight Segmentation in Tomatoes Using Spatial Domain Methods and Colour Analysis (International Journal of Scientific Research, Oct 2020)
+- Awards: Second place, Social Data Challenge 4.0 by DataLab Mexico (2021); GIST Tech-I Semifinalist (2016); Babson Build Fellow (2015); Winner IDEup Spin Banco Santander (2014)
+- Courses: Machine Learning in Production, Machine Learning Data Lifecycle, Modeling Pipelines, MLOps Essentials, Deploying Scalable Machine Learning for Data Science, Wizeline Data Engineering Bootcamp

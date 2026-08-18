@@ -12,28 +12,28 @@
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>KG Construction & Retrieval for LLM Test Scenario Generation | Carlos Lopez Mejia</title>
-    <meta name="description" content="TUM Master's Thesis: Structured Knowledge Graph retrieval layer for LLM-based test scenario generation from automotive regulations (UN Regulation 152)." />
+    <title>Schema-Guided KG Construction & Retrieval for LLM-Based Automotive Test Scenario Generation | Carlos Lopez Mejia</title>
+    <meta name="description" content="TUM Master's Thesis: Schema-Guided KG Construction and Retrieval for LLM-Based Automotive Test Scenario Generation from UN Regulation No. 152." />
     <link rel="canonical" href="https://carloslme.com/projects/masters-thesis/" />
 
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="KG Construction & Retrieval for LLM Test Scenario Generation | Carlos Lopez Mejia" />
-    <meta property="og:description" content="TUM Master's Thesis: Structured Knowledge Graph retrieval layer for LLM-based test scenario generation from automotive regulations (UN Regulation 152)." />
+    <meta property="og:title" content="Schema-Guided KG Construction & Retrieval for LLM-Based Automotive Test Scenario Generation" />
+    <meta property="og:description" content="TUM Master's Thesis: Schema-Guided KG Construction and Retrieval for LLM-Based Automotive Test Scenario Generation from UN Regulation No. 152." />
     <meta property="og:url" content="https://carloslme.com/projects/masters-thesis/" />
     <meta property="og:site_name" content="Carlos Lopez Mejia" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="KG Construction & Retrieval for LLM Test Scenario Generation" />
-    <meta name="twitter:description" content="TUM Master's Thesis research on Knowledge Graphs and LLM test scenario generation by Carlos Lopez Mejia." />
+    <meta name="twitter:title" content="Schema-Guided KG Construction & Retrieval for LLM-Based Automotive Test Scenario Generation" />
+    <meta name="twitter:description" content="TUM Master's Thesis research on Schema-Guided Knowledge Graphs and LLM test scenario generation by Carlos Lopez Mejia." />
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ScholarlyArticle",
-      "headline": "KG Construction and Retrieval for LLM-Based Test Scenario Generation from Automotive Regulations",
+      "headline": "Schema-Guided KG Construction and Retrieval for LLM-Based Automotive Test Scenario Generation",
       "author": {
         "@type": "Person",
         "name": "Carlos Lopez Mejia",
@@ -72,9 +72,9 @@
 
     <main class="container" style="padding: 2rem 0 3rem;">
       <section class="card">
-        <p class="eyebrow" style="color: var(--color-primary); font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Special Feature &bull; Master's Thesis</p>
-        <h1 class="section-title" style="margin-top: 0;">KG Construction and Retrieval for LLM-Based Test Scenario Generation from Automotive Regulations</h1>
-        <p class="dates">Implementation underway</p>
+        <p class="eyebrow" style="color: var(--accent); font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Special Feature &bull; Master's Thesis</p>
+        <h1 class="section-title" style="margin-top: 0;">Schema-Guided KG Construction and Retrieval for LLM-Based Automotive Test Scenario Generation</h1>
+        <p class="dates">Officially registered &bull; Implementation underway</p>
         
         <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 1.25rem; margin: 1.5rem 0;">
           <p style="margin: 0 0 0.5rem 0;"><strong>Institution:</strong> Technical University of Munich (TUM)</p>
@@ -84,18 +84,17 @@
 
         <h2>Overview</h2>
         <p>
-          This thesis investigates a structured Knowledge Graph retrieval layer to improve Retrieval-Augmented Generation (RAG) for automated vehicle testing. By integrating Knowledge Graphs with LLMs, the research aims to enhance the automated generation of test scenarios directly from complex automotive regulatory standards.
+          This thesis investigates schema-guided Knowledge Graph (KG) construction and retrieval strategies to improve LLM-based automated generation of test scenarios directly from complex automotive regulatory standards.
         </p>
         <p>
-          The domain focus is generating executable test scenarios (speed / load condition / post-condition tuples) derived from <strong>UN Regulation 152</strong> (Advanced Emergency Braking Systems for M1 and N1 vehicles).
+          The domain focus is generating structured test scenarios (speed / load condition / post-condition tuples) derived from <strong>UN Regulation No. 152</strong> (Advanced Emergency Braking Systems for M1 and N1 vehicles).
         </p>
 
         <h2>Research Objectives and Methodology</h2>
         <ul>
-          <li><strong>Knowledge Graph Retrieval Layer:</strong> Design and evaluate a structured Knowledge Graph retrieval layer that captures structural dependencies and regulatory semantics from automotive regulations.</li>
-          <li><strong>Test Scenario Generation:</strong> Improve LLM-driven generation of structured test scenarios (speed / load condition / post-condition tuples).</li>
-          <li><strong>Benchmarking Framework:</strong> Benchmark performance against three systems: <strong>RegulaRAG</strong>, <strong>LightRAG</strong>, and <strong>HippoRAG 2</strong>.</li>
-          <li><strong>Evaluation Metrics:</strong> Measure retrieval and generation performance using Precision, Recall, and F1 score, alongside scenario generation success and failure rates.</li>
+          <li><strong>Comparative Evaluation of Retrieval Strategies:</strong> Systematic comparison of flat vector retrieval, LightRAG, and HippoRAG 2 for generating test scenarios from UN Regulation No. 152, benchmarked against 59 annotated test scenarios using precision, recall, and F1-score.</li>
+          <li><strong>Schema-Guided Knowledge Graph Construction:</strong> Designing and automatically constructing a schema-guided knowledge graph that classifies regulatory parameters (scenario type, speed, load condition, subsequent condition) and bounds retrieval to a single scenario family, correcting retrieval failures seen in general-purpose graph construction.</li>
+          <li><strong>Automotive Compliance Grounding:</strong> Evaluating extraction accuracy across diverse scenario variations to ensure full compliance verification without hallucinations.</li>
         </ul>
 
         <h2>Living Project Updates</h2>
