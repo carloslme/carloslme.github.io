@@ -7,7 +7,12 @@ AGENTS.md
 .vscode/
 *.local.md
 
+# Maintenance scripts (local only)
+maintenance/
+scripts/
+
 # Agent prompt / working notes that must never be published
 *Antigravity*.md
 *Agent-Prompt*.md
 2???-??-??_*.md
+
