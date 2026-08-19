@@ -1,0 +1,5 @@
+AGENTS.md
+_site/
+vendor/
+Gemfile.lock
+assets/pdf/
