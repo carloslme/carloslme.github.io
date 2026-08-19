@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+# Local content guard. Fast feedback before anything is committed.
+#
+# This file is public. It contains NO sensitive patterns. The pattern list lives in
+# .security/patterns.txt, which is gitignored and never leaves this machine.
+#
+# Enable with:  git config core.hooksPath .githooks
+# Bypass is possible with --no-verify, which is why this is the convenience layer,
+# not the real control. The real control is branch protection on main.
+
+set -uo pipefail
+
+PATTERNS_FILE=".security/patterns.txt"
+fail=0
+
+# The guard's own files are excluded: they contain pattern definitions, which would
+# otherwise match themselves. Changes to them are reviewed by a human at merge time.
+added="$(git diff --cached --unified=0 \
+           -- . ':(exclude).githooks/pre-commit' ':(exclude).github/workflows/content-guard.yml' \
+         | grep -E '^\+' | grep -vE '^\+\+\+' || true)"
+
+if [ -z "$added" ]; then
+  exit 0
+fi
+
+report() {
+  printf '\n  BLOCKED: %s\n' "$1"
+  printf '%s\n' "$added" | grep -nEi "$2" | head -3 | sed 's/^/      /'
+  fail=1
+}
+
+# --- Structural checks (safe to publish) ---
+report_if() { printf '%s\n' "$added" | grep -qEi "$2" && report "$1" "$2"; }
+
+report_if "absolute local filesystem path"      '(/Users/|/home/[a-z]|~/Documents|~/Desktop)'
+report_if "SQL definition or grant syntax"      '(CREATE (OR REPLACE )?(FUNCTION|POLICY|TABLE)|GRANT [A-Z]+ ON|REVOKE [A-Z]+ ON)'
+report_if "row-level-security policy language"  '(ROW LEVEL SECURITY|USING \(|WITH CHECK \()'
+report_if "credential-shaped string"            '(sbp_[A-Za-z0-9]{20}|ghp_[A-Za-z0-9]{20}|eyJ[A-Za-z0-9_-]{30}|AKIA[0-9A-Z]{16})'
+# Private repository/system names are NOT listed here — this file is public.
+# They live in .security/patterns.txt and the CONTENT_GUARD_PATTERNS secret.
+
+# --- Protected pattern list (local only) ---
+if [ -f "$PATTERNS_FILE" ]; then
+  while IFS= read -r pat; do
+    [ -z "$pat" ] && continue
+    case "$pat" in \#*) continue ;; esac
+    if printf '%s\n' "$added" | grep -qiE "$pat"; then
+      report "protected pattern matched" "$pat"
+    fi
+  done < "$PATTERNS_FILE"
+else
+  printf '\n  WARNING: %s not found. Structural checks ran; protected patterns did not.\n' "$PATTERNS_FILE"
+  printf '  Restore it from your private backup before relying on this hook.\n'
+fi
+
+if [ "$fail" -ne 0 ]; then
+  cat <<'EOF'
+
+  Commit refused by the local content guard.
+
+  Fix the flagged lines. Do not bypass with --no-verify unless Carlos has
+  explicitly told you to, in this session, for this specific commit.
+
+EOF
+  exit 1
+fi
+
+exit 0

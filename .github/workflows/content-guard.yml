@@ -1,0 +1,96 @@
+name: Content Guard
+
+# Blocks a pull request whose diff introduces content that must not be published.
+#
+# Design note: the sensitive pattern list is NOT stored in this file. This repository
+# is public, and a scanner that enumerates what it is protecting becomes the leak it
+# was written to prevent. Patterns are supplied by the CONTENT_GUARD_PATTERNS secret.
+# The structural checks below are deliberately generic and safe to publish.
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  guard:
+    name: Content Guard
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Collect added lines
+        id: diff
+        run: |
+          git fetch origin "${{ github.base_ref }}" --depth=1
+          # Only ADDED lines matter. Removing a sensitive string is what we want.
+          # The guard's own files are excluded: they hold pattern definitions that
+          # would otherwise match themselves. Human review covers changes to them.
+          git diff "origin/${{ github.base_ref }}...HEAD" --unified=0 \
+            -- . ':(exclude).githooks/pre-commit' ':(exclude).github/workflows/content-guard.yml' \
+            | grep -E '^\+' | grep -vE '^\+\+\+' > added.txt || true
+          echo "count=$(wc -l < added.txt)" >> "$GITHUB_OUTPUT"
+          echo "Added lines: $(wc -l < added.txt)"
+
+      - name: Structural checks
+        run: |
+          fail=0
+
+          check() {
+            # $1 = human label, $2 = ERE
+            if grep -qE "$2" added.txt; then
+              echo "::error::BLOCKED — $1"
+              grep -nE "$2" added.txt | head -5 | sed 's/^/    /'
+              fail=1
+            fi
+          }
+
+          check "absolute local filesystem path"      '(/Users/|/home/[a-z]|~/Documents|~/Desktop)'
+          check "SQL data-definition or grant syntax" '(CREATE (OR REPLACE )?(FUNCTION|POLICY|TABLE)|GRANT [A-Z]+ ON|REVOKE [A-Z]+ ON|ALTER TABLE)'
+          check "row-level-security policy language"  '(ROW LEVEL SECURITY|USING \(|WITH CHECK \()'
+          check "credential-shaped string"            '(sbp_[A-Za-z0-9]{20}|ghp_[A-Za-z0-9]{20}|eyJ[A-Za-z0-9_-]{30}|AKIA[0-9A-Z]{16})'
+          # Private repository/system names are NOT listed here — this file is public.
+          # They are supplied by the CONTENT_GUARD_PATTERNS secret instead.
+
+          exit $fail
+
+      - name: Secret pattern checks
+        env:
+          PATTERNS_B64: ${{ secrets.CONTENT_GUARD_PATTERNS }}
+        run: |
+          if [ -z "$PATTERNS_B64" ]; then
+            echo "::error::CONTENT_GUARD_PATTERNS secret is not configured. Refusing to pass."
+            echo "This guard fails closed on purpose. Configure the secret before merging."
+            exit 1
+          fi
+
+          echo "$PATTERNS_B64" | base64 -d > /tmp/patterns.txt
+          echo "Loaded $(wc -l < /tmp/patterns.txt) protected patterns."
+
+          fail=0
+          n=0
+          while IFS= read -r pat; do
+            [ -z "$pat" ] && continue
+            n=$((n+1))
+            if grep -qiE "$pat" added.txt; then
+              # Never echo the pattern or the matching line — that would put the
+              # secret into a public build log.
+              echo "::error::BLOCKED — protected pattern #$n matched an added line."
+              fail=1
+            fi
+          done < /tmp/patterns.txt
+
+          rm -f /tmp/patterns.txt
+          if [ $fail -ne 0 ]; then
+            echo "Run the local pre-commit hook to see which line is at fault."
+          fi
+          exit $fail
+
+      - name: Result
+        if: success()
+        run: echo "Content Guard passed. Human review is still required before merge."

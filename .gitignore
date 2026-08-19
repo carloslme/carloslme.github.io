@@ -16,3 +16,9 @@ scripts/
 *Agent-Prompt*.md
 2???-??-??_*.md
 
+
+# Local agent context, never published
+.agents/
+
+# Local security pattern list, never published
+.security/
