@@ -12,24 +12,24 @@
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Salsuki Architecture & System Design | Carlos Lopez Mejia</title>
-    <meta name="description" content="Full-stack community management platform built with Supabase (Postgres, RLS, Edge Functions) and React 19/TypeScript on Vercel." />
+    <title>Salsuki: Community Platform | Carlos Lopez Mejia</title>
+    <meta name="description" content="Community platform for a non-profit salsa school in Munich, built with Supabase and React 19/TypeScript on Vercel." />
     <link rel="canonical" href="https://carloslme.com/projects/salsuki/" />
 
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Salsuki Architecture & System Design | Carlos Lopez Mejia" />
-    <meta property="og:description" content="Full-stack community management platform built with Supabase (Postgres, RLS, Edge Functions) and React 19/TypeScript on Vercel." />
+    <meta property="og:title" content="Salsuki: Community Platform | Carlos Lopez Mejia" />
+    <meta property="og:description" content="Community platform for a non-profit salsa school in Munich, built with Supabase and React 19/TypeScript on Vercel." />
     <meta property="og:url" content="https://carloslme.com/projects/salsuki/" />
     <meta property="og:image" content="https://carloslme.com/assets/img/salsuki-architecture.svg" />
     <meta property="og:site_name" content="Carlos Lopez Mejia" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Salsuki Architecture & System Design" />
-    <meta name="twitter:description" content="Full-stack community management platform built with Supabase and React 19 on Vercel." />
+    <meta name="twitter:title" content="Salsuki: Community Platform" />
+    <meta name="twitter:description" content="Community platform for a non-profit salsa school in Munich, built with Supabase and React 19/TypeScript on Vercel." />
     <meta name="twitter:image" content="https://carloslme.com/assets/img/salsuki-architecture.svg" />
-    <link rel="alternate" type="application/rss+xml" title="Carlos Lopez Mejia | Projects & Technical Feed" href="https://carloslme.com/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Carlos Lopez Mejia | Projects &amp; Technical Feed" href="https://carloslme.com/feed.xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -51,29 +51,33 @@
     </header>
 
     <main class="container" style="padding: 2rem 0 3rem;">
+
+      <!-- Origin story -->
       <section class="card">
         <h1 class="section-title">Salsuki</h1>
         <p class="dates">2024 – Current</p>
+
+        <h2 class="section-title">Why it exists</h2>
         <p>
-          Salsuki is a community management platform built for a non-profit salsa school. The system combines a React 19 and TypeScript frontend hosted on Vercel with a Supabase backend providing Postgres, Row-Level Security, Auth, Edge Functions, and Storage. The product supports bookings, credits, waitlists, and a learning resource library.
+          It all started when I moved to Munich for my master's degree in late 2023. I loved dancing salsa and had even taught classes in my spare time back in Mexico. After moving, I began teaching a few friends for free; they eventually invited more friends, and the group grew to nearly 100 students. The community expanded so much that I could no longer keep up with scheduling classes, sending messages, providing feedback, or sharing the moves we'd covered (spanning four levels so far).
         </p>
-
-        <img src="/assets/img/salsuki-architecture.svg" alt="Salsuki architecture" style="width:100%; height:auto; margin-top: 1rem;" />
-
-        <h2 class="section-title">Technical decisions worth discussing</h2>
-        <ul>
-          <li>Ledger-based credits: balances are computed with a live SUM over an [redacted] to guarantee an audit trail and avoid lost-update races.</li>
-          <li>Authorization enforced in Postgres via Row-Level Security policies rather than scattered app checks, making it harder to bypass data rules accidentally.</li>
-          <li>Atomic multi-table writes implemented as `[redacted]` Postgres functions so multi-step financial operations are consistent and atomic.</li>
-        </ul>
-
         <p>
-          The codebase is developed as a solo-maintained project with mandatory PR review. CI runs a local Supabase stack to apply and lint migrations before changes land in shared environments. For more technical details, see the repository or the live site when available.
+          We started renting a studio in November 2025, and managing finances, logistics, registrations, and the like became chaotic; it was time to scale operations and automate. Although I already had processes in place for registration, determining new class cohorts, setting rules, and so on, I needed additional automation once money started coming in, especially given that the community is non-profit. So, I decided to leverage everything I knew about web programming, agentic AI, DevOps, data, operations, and more to create Salsuki.
         </p>
+      </section>
 
-        <p style="margin-top:1rem;"><a href="https://salsuki-website.vercel.app/" target="_blank" rel="noreferrer">Live site</a></p>
+      <!-- Architecture diagram -->
+      <section class="card">
+        <h2 class="section-title">System architecture</h2>
+        <img src="/assets/img/salsuki-architecture.svg" alt="Salsuki system architecture: browser client, Vercel hosting, Supabase (Auth, Postgres with row-level security, Storage, Edge Functions), GitHub Actions CI/CD, and Sentry monitoring." style="width:100%; height:auto; margin-top: 1rem;" />
+      </section>
+
+      <!-- Links -->
+      <section class="card">
+        <p><a href="https://salsuki-website.vercel.app/" target="_blank" rel="noreferrer">Live site</a></p>
         <p><a href="/projects/">Back to Projects</a></p>
       </section>
+
     </main>
   </body>
 </html>

@@ -25,7 +25,7 @@
       <pubDate>Tue, 11 Aug 2026 10:00:00 GMT</pubDate>
       <category>Cloud &amp; DevOps</category>
       <category>Data Engineering</category>
-      <description><![CDATA[Full-stack community management platform built with Supabase (Postgres, Row-Level Security, Edge Functions), React 19/TypeScript on Vercel, and automated CI/CD. Includes append-only financial ledger with SUM() balance calculations and atomic [redacted] RPCs.]]></description>
+      <description><![CDATA[Community platform for a non-profit salsa school in Munich, built with Supabase and React 19/TypeScript on Vercel.]]></description>
     </item>
 
     <item>

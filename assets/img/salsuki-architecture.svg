@@ -43,7 +43,7 @@
 
   <rect x="280" y="258" width="180" height="64" rx="12" class="box"/>
   <text x="370" y="284" text-anchor="middle" class="title">Postgres</text>
-  <text x="370" y="300" text-anchor="middle" class="subtitle">RLS on every table</text>
+  <text x="370" y="300" text-anchor="middle" class="subtitle">Row-level security</text>
 
   <rect x="480" y="258" width="150" height="64" rx="12" class="box"/>
   <text x="555" y="284" text-anchor="middle" class="title">Storage</text>
