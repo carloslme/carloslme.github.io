@@ -3,3 +3,6 @@
 _site/
 .DS_Store
 */.DS_Store
+AGENTS.md
+.vscode/
+*.local.md
